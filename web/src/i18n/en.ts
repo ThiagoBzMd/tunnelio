@@ -29,6 +29,8 @@ export const en = {
   "auth.setNewPassword": "Set new password",
   "auth.passwordCommon": "This password is too common. Choose another one.",
   "auth.passwordWeak": "This password is easy to guess. A phrase of a few unrelated words works well.",
+  "auth.strengthCheckFailed": "The password could not be checked. Reload the page and try again.",
+  "auth.botCheckWaiting": "Waiting for the bot check. If it does not appear, allow this site in your blocker and reload the page.",
   "auth.strength0": "Very weak",
   "auth.strength1": "Weak",
   "auth.strength2": "Fair — still easy to guess",

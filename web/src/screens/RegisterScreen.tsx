@@ -36,7 +36,13 @@ export function RegisterScreen() {
     const problem = checkPassword(password);
     if (problem === "short") return setLocalError(t("auth.passwordTooShort", { n: MIN_PASSWORD }));
     if (problem === "common") return setLocalError(t("auth.passwordCommon"));
-    if (await tooWeak(password, strengthHints(email))) return setLocalError(t("auth.passwordWeak"));
+    let weak: boolean;
+    try {
+      weak = await tooWeak(password, strengthHints(email));
+    } catch {
+      return setLocalError(t("auth.strengthCheckFailed"));
+    }
+    if (weak) return setLocalError(t("auth.passwordWeak"));
     if (password !== confirm) return setLocalError(t("auth.passwordMismatch"));
     const result = await authStore.getState().register(email.trim(), password, botCheckToken ?? undefined);
     if (result === "signed_in") await afterLogin();
@@ -68,7 +74,8 @@ export function RegisterScreen() {
         </span>
       }
     >
-      <form onSubmit={(e) => void submit(e)} className="space-y-4" data-testid="register-form">
+      {/* noValidate: the checks below show their message; the browser's own (required, minLength) say nothing on iOS Safari. */}
+      <form onSubmit={(e) => void submit(e)} noValidate className="space-y-4" data-testid="register-form">
         <div className="space-y-1.5">
           <Label htmlFor="email">{t("auth.email")}</Label>
           <Input id="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} data-testid="email" />
@@ -85,6 +92,11 @@ export function RegisterScreen() {
         </div>
         {flags.bot_check_site_key ? <BotCheck siteKey={flags.bot_check_site_key} onToken={setBotCheckToken} /> : null}
         <FormError message={localError ?? error} />
+        {needsBotCheck ? (
+          <p className="text-xs text-muted-foreground" data-testid="bot-check-waiting">
+            {t("auth.botCheckWaiting")}
+          </p>
+        ) : null}
         <Button type="submit" className="w-full" disabled={busy || needsBotCheck} data-testid="submit">
           {busy ? <Loader2Icon className="animate-spin" /> : null}
           {t("auth.createAccount")}

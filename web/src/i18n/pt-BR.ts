@@ -29,6 +29,8 @@ export const ptBR: Record<TKey, string> = {
   "auth.setNewPassword": "Definir nova senha",
   "auth.passwordCommon": "Esta senha é comum demais. Escolha outra.",
   "auth.passwordWeak": "Esta senha é fácil de adivinhar. Uma frase com algumas palavras sem relação entre si funciona bem.",
+  "auth.strengthCheckFailed": "Não foi possível verificar a senha. Recarregue a página e tente de novo.",
+  "auth.botCheckWaiting": "Aguardando a verificação anti-robô. Se ela não aparecer, libere este site no seu bloqueador e recarregue a página.",
   "auth.strength0": "Muito fraca",
   "auth.strength1": "Fraca",
   "auth.strength2": "Razoável — ainda fácil de adivinhar",

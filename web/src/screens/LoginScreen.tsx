@@ -101,6 +101,11 @@ export function LoginScreen() {
         ) : null}
         {flags.bot_check_site_key ? <BotCheck siteKey={flags.bot_check_site_key} onToken={setBotCheckToken} /> : null}
         <FormError message={shownError} />
+        {needsBotCheck ? (
+          <p className="text-xs text-muted-foreground" data-testid="bot-check-waiting">
+            {t("auth.botCheckWaiting")}
+          </p>
+        ) : null}
         <Button type="submit" className="w-full" disabled={busy || needsBotCheck || (totpRequired && totp.length !== 6)} data-testid="submit">
           {busy ? <Loader2Icon className="animate-spin" /> : null}
           {t("auth.login")}
