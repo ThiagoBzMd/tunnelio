@@ -52,7 +52,7 @@ sequenceDiagram
     participant T as Computer app
     participant O as Ollama
 
-    Note over B,T: Once per computer: pairing with the 12-symbol code shown by the computer app.<br/>Both ends get the same key; the relay passes the pairing along and never learns it.<br/>Your other browsers receive it sealed with your password.
+    Note over B,T: Once per computer: pairing with the 12-symbol code shown by the computer app.<br/>Both ends get the same key. The relay passes the pairing along and never learns it.<br/>Your other browsers receive it sealed with your password.
 
     You->>B: types a message
     Note over B: encrypts it
