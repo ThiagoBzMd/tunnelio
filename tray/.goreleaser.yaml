@@ -81,7 +81,9 @@ release:
     name: tunnelio
   name_template: "Tunnelio {{ .Version }}"
 
-# winget (OSS feature): opens a PR against microsoft/winget-pkgs on every stable tag.
+# winget (OSS feature): opens a PR against microsoft/winget-pkgs on every stable tag. Off until
+# the fork ThiagoBzMd/winget-pkgs and the WINGET_TOKEN secret exist: with neither, the publish of a
+# stable tag would fail here after the downloads are up. Then: skip_upload: auto (stable tags only).
 winget:
   - name: Tunnelio
     publisher: Tunnelio
@@ -91,7 +93,7 @@ winget:
     license_url: https://github.com/ThiagoBzMd/tunnelio/blob/main/tray/LICENSE
     homepage: https://github.com/ThiagoBzMd/tunnelio
     package_identifier: Tunnelio.Tunnelio
-    skip_upload: auto     # only on stable (non-prerelease) tags
+    skip_upload: true
     repository:
       owner: ThiagoBzMd
       name: winget-pkgs
