@@ -110,9 +110,8 @@ them.
    `Tunnelio-ubuntu.deb` (Ubuntu and Debian), with ARM builds for Windows and Linux. The installers
    are not signed yet: macOS asks you to allow the app in System Settings → Privacy & Security, and
    Windows may warn about an unknown publisher.
-2. **Create an account** on your own server (see [Self-hosting](#self-hosting)). The hosted service
-   at [app.tunnelio.app](https://app.tunnelio.app) is a private beta: its sign-ups are closed for
-   now.
+2. **Create an account** at [app.tunnelio.app](https://app.tunnelio.app) (or on your own server, see
+   below).
 3. **Pair the computer**: in the computer app's menu, choose **Pair a device…**. A page opens with
    a 12-symbol code and a QR code. In the web app, choose **Add a device** and type the code, or
    scan the QR code with your phone. The secret part of the code (8 of the 12 symbols) never
