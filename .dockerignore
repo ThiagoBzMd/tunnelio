@@ -1,0 +1,27 @@
+# The images are built with the repository root as context (server/Dockerfile,
+# deploy/nginx/Dockerfile): keep local state, secrets and build output out of them.
+.git
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.prod.example
+secrets
+internal
+landing
+tray
+server/.venv
+server/venv
+server/data
+server/staticfiles
+server/db.sqlite3
+server/catalog/testdata
+web/dist
+web/coverage
+web/e2e/screenshots
+web/e2e/report
+web/test-results

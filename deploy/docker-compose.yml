@@ -1,0 +1,16 @@
+# Self-host: one container, one port, one volume (SQLite and the web app inside the image).
+# Put your variables in a .env next to this file (see server/.env.example): at least SECRET_KEY,
+# and ALLOWED_HOSTS with the name you reach it by. Browsers need HTTPS (or http://localhost on
+# this computer): see "Self-hosting" in the README. Without a published image, build it:
+#   docker build -f ../server/Dockerfile -t ghcr.io/thiagobzmd/tunnelio-server:latest ..
+services:
+  tunnelio:
+    image: ghcr.io/thiagobzmd/tunnelio-server:latest
+    ports: ["127.0.0.1:8080:8080"]   # this computer only; HTTPS in front (e.g. `tailscale serve --bg 8080`) exposes it
+    volumes:
+      - tunnelio-data:/data
+    env_file: .env
+    restart: unless-stopped
+
+volumes:
+  tunnelio-data:

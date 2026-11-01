@@ -1,0 +1,34 @@
+name: CI tray (Windows, macOS)
+# The tray's tests on the other desktop platforms, by hand before a release:
+# `gh workflow run ci-tray-platforms.yml`. On Linux the same tests run with scripts/check.sh before
+# every release (and in ci.yml, by hand or where RUN_CI is "true").
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-tray-platforms-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tray:
+    name: Tray (Go)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-14]
+    defaults: { run: { working-directory: tray } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.27.x"          # the newest patch release (go.mod's `go` line is the minimum)
+          check-latest: true
+          cache-dependency-path: tray/go.sum
+      - name: Build
+        run: go build ./...
+      - name: Test (includes vectors + import-rule tests)
+        run: go test ./...

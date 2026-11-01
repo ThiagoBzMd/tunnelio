@@ -1,0 +1,61 @@
+# ── Environment and secrets ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env.prod.example
+/secrets/*
+!/secrets/README.md
+
+# ── Local working notes ─────────────────────────────────────────
+/internal/*
+!/internal/README.md
+
+# ── Go (tray/) ──────────────────────────────────────────────────
+tray/dist/
+tray/bin/
+/tray/tunnelio
+tray/*.exe
+tray/*.dmg
+tray/*.msix
+tray/*.AppImage
+
+# ── Python (server/) ────────────────────────────────────────────
+__pycache__/
+*.pyc
+server/.venv/
+server/venv/
+server/staticfiles/
+server/data/
+server/db.sqlite3
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Node ───────────────────────────────────────────────────────
+node_modules/
+web/dist/
+web/coverage/
+*.tsbuildinfo
+
+# ── IDE / OS ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ── Local tool settings ─────────────────────────────────────────
+.claude/
+
+# ── Logs ────────────────────────────────────────────────────────
+*.log
+*.syso
+
+# ── Local deploy settings and database dumps ────────────────────
+/deploy/.deploy.env
+/deploy/dump-sqlite.json
+
+# ── Generated at release time (tray/.goreleaser.yaml) ───────────
+tray/THIRD_PARTY_LICENSES.txt
+tray/packaging/linux/copyright

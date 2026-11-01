@@ -1,0 +1,72 @@
+# The app's ingress: app.tunnelio.app (web app files here; API, WebSocket relay and Django static
+# proxied to the tunnelio container). The public site (tunnelio.app, www) is a separate container
+# that is not part of this repository.
+# ${ADMIN_URL_PATH} and ${RATE_LIMIT_KEY} are substituted at container start (official nginx image
+# envsubst hook). Rate limits key on the visitor's address: the CLIENT_IP_HEADER set by the proxy in
+# front, or the socket address without one (16-rate-limit-key.envsh).
+limit_req_zone ${RATE_LIMIT_KEY} zone=auth_limit:10m rate=10r/m;
+limit_req_zone ${RATE_LIMIT_KEY} zone=api_limit:10m rate=30r/s;
+limit_req_status 429;
+
+# App: static files from the image; API + WebSocket + admin → tunnelio
+server {
+    listen 80;
+    server_name app.tunnelio.app localhost;
+    root /var/www/app;
+    client_max_body_size 16m;
+    charset utf-8;   # third-party-licenses.txt and the other text files are UTF-8
+
+    include /etc/nginx/security-headers.conf;
+
+    location /admin/ { return 404; }
+
+    types {
+        application/manifest+json webmanifest;
+    }
+    include /etc/nginx/mime.types;
+
+    location = /nginx-health { default_type text/plain; return 200 "ok\n"; }
+
+    location /ws/ {
+        proxy_pass http://tunnelio:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_buffering off;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+
+    # Sign-in, sign-up and code endpoints: a stricter limit on top of the server's own throttles.
+    location ~ ^/api/auth/(login|register|verify-email|resend-code|password-reset)(/|$) {
+        limit_req zone=auth_limit burst=5 nodelay;
+        proxy_pass http://tunnelio:8080; include /etc/nginx/proxy-headers.conf;
+    }
+    location /api/     { limit_req zone=api_limit burst=20 nodelay; proxy_pass http://tunnelio:8080; include /etc/nginx/proxy-headers.conf; }
+    location = /healthz { proxy_pass http://tunnelio:8080; include /etc/nginx/proxy-headers.conf; }
+    # The Django admin is NOT reachable from the public hostname: see the tailnet server below.
+
+    # Hashed bundles never change: cache for a year. index.html must always be fresh.
+    location /assets/ { expires 1y; add_header Cache-Control "public, immutable"; include /etc/nginx/security-headers.conf; try_files $uri =404; }
+    location = /version.json { add_header Cache-Control "no-cache"; include /etc/nginx/security-headers.conf; }
+    location = /index.html { add_header Cache-Control "no-cache"; include /etc/nginx/security-headers.conf; }
+    # Client-side routes (/chat/…, /devices, /settings) load the app shell.
+    location / { try_files $uri /index.html; }
+}
+
+# Admin (Django), tailnet only: published on 127.0.0.1:8081 by compose and reached through
+# `tailscale serve` (HTTPS with the tailnet certificate, X-Forwarded-Proto https). Nothing else
+# answers here; the public hostname above never routes the admin path.
+server {
+    listen 81;
+    server_name _;
+    absolute_redirect off;             # redirects stay relative: the browser keeps https://…ts.net
+    include /etc/nginx/security-headers.conf;
+    location /${ADMIN_URL_PATH}/ { limit_req zone=auth_limit burst=10 nodelay; proxy_pass http://tunnelio:8080; include /etc/nginx/proxy-headers.conf; }
+    location /static/  { proxy_pass http://tunnelio:8080; include /etc/nginx/proxy-headers.conf; }  # admin assets
+    location = / { return 302 /${ADMIN_URL_PATH}/; }
+    location / { return 404; }
+}

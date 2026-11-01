@@ -1,0 +1,54 @@
+name: Bug report
+description: Something does not work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. **Security problems never go here**: follow SECURITY.md (private report).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: input
+    id: web
+    attributes:
+      label: Web app build
+      description: Settings → General → Build (or the address you use, if you run your own server).
+  - type: input
+    id: tray
+    attributes:
+      label: Computer app version and system
+      description: The version in the Tunnelio tray menu, and Windows / macOS / Linux with its version.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+  - type: input
+    id: ollama
+    attributes:
+      label: Ollama version and model
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Remove anything private first (e-mail addresses, conversation text, pairing codes).
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before sending
+      options:
+        - label: This is not a security vulnerability (those follow SECURITY.md).
+          required: true

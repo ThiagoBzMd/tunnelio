@@ -1,0 +1,102 @@
+These notices cover what the bundle carries that is not a separate JavaScript package: the fonts,
+the style sheets, the build tool's helpers, code copied into Tunnelio, code that other packages
+embed, and data.
+
+==============================================================================
+Geist (font) — SIL Open Font License 1.1
+Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font)
+Shipped unmodified (via @fontsource-variable/geist). Licence text: OFL-1.1 below.
+
+==============================================================================
+Source Serif 4 (font) — SIL Open Font License 1.1
+© 2014 - 2021 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'.
+Shipped unmodified (via @fontsource-variable/source-serif-4). Licence text: OFL-1.1 below.
+
+==============================================================================
+shadcn/ui — MIT
+Copyright (c) 2023 shadcn
+The interface components in web/src/components/ui/ were generated from the shadcn/ui registry and
+then adapted. MIT licence text below.
+
+==============================================================================
+Tailwind CSS (generated styles) — MIT
+Copyright (c) Tailwind Labs, Inc.
+
+tw-animate-css — MIT
+Copyright (c) 2025 Wombosvideo
+
+shadcn (theme style sheet) — MIT
+Copyright (c) 2023 shadcn
+
+==============================================================================
+Vite (runtime helpers) — MIT
+Copyright (c) 2019-present, VoidZero Inc. and Vite contributors
+The build adds a few small helpers to the bundle: module preloading, and the CommonJS interop of
+@rollup/plugin-commonjs (Copyright (c) 2019 RollupJS Plugin Contributors).
+
+==============================================================================
+Code embedded in other packages
+- core-js (inside pdfjs-dist) — MIT. Copyright (c) 2013–2025 Denis Pushkarev (zloirock.ru),
+  2025–2026 CoreJS Company.
+- pako (inside jszip) — MIT AND Zlib. Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn.
+- lie (inside jszip) — MIT. Copyright (c) 2014-2018 Calvin Metcalf, Jordan Harband.
+- immediate (inside jszip) — MIT. Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, Domenic
+  Denicola, Brian Cavalier.
+- setimmediate (inside jszip) — MIT. Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, and
+  Domenic Denicola.
+- jszip is offered under "MIT OR GPL-3.0-or-later"; Tunnelio uses it under the MIT licence.
+- hash-wasm's Argon2 module is based on Go's Argon2 implementation (golang.org/x/crypto) —
+  BSD-3-Clause, Copyright (c) 2009 The Go Authors. Its BLAKE2b module is the BLAKE2 reference code,
+  Copyright 2012 Samuel Neves, offered under CC0-1.0 OR OpenSSL OR Apache-2.0; Tunnelio uses it
+  under CC0-1.0.
+- cn includes tables compiled from tailwind-merge's default configuration — MIT, Copyright (c) 2021
+  Dany Castillo.
+- lucide-react (ISC) includes icons from Feather — MIT, Copyright (c) 2013-2023 Cole Bemis.
+
+==============================================================================
+Packages above that declare the MIT licence but ship no licence file (MIT text at the end)
+- @lobehub/icons-static-svg — Copyright (c) 2023 LobeHub (https://github.com/lobehub/lobe-icons).
+- qrcode-generator — Copyright (c) 2011 Kazuhiko Arase (https://github.com/kazuhikoarase/qrcode-generator).
+- react-remove-scroll-bar — Copyright (c) Anton Korzunov (https://github.com/theKashey/react-remove-scroll-bar).
+
+==============================================================================
+Data: password-strength word lists (@zxcvbn-ts/language-en, @zxcvbn-ts/language-pt-br)
+This package includes data derived from OpenSubtitles via OPUS in commonWords.json
+(https://opus.nlpl.eu/).
+
+Source dataset: OpenSubtitles 2024
+Provider: Helsinki-NLP / OPUS
+
+License: ODC-BY (Open Data Commons Attribution License)
+
+Original data is attributed to subtitle contributors and rights holders.
+This package contains a processed derivative:
+- tokenized text
+- frequency aggregation
+- normalization and filtering
+
+Any redistribution of this package must retain this notice.
+
+==============================================================================
+Trademarks
+- "QR Code" is a registered trademark of DENSO WAVE INCORPORATED (noted by qrcode-generator).
+- The model makers' logos (from @lobehub/icons-static-svg, MIT as files) are trademarks of their
+  owners; Tunnelio shows them only to say which maker a model comes from.
+
+==============================================================================
+MIT License (for the MIT entries above; each with its own copyright line)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

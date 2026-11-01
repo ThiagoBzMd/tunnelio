@@ -1,0 +1,50 @@
+# Publishes the server image (Django + built SPA) to GHCR on tags `server/vX.Y.Z`.
+# Image: ghcr.io/thiagobzmd/tunnelio-server:{X.Y.Z, X.Y, latest} — linux/amd64 + linux/arm64.
+name: Release server
+on:
+  push:
+    tags: ["server/v*"]
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/thiagobzmd/tunnelio-server
+          tags: |
+            type=match,pattern=server/v(.*),group=1
+            type=match,pattern=server/v(\d+\.\d+),group=1
+            type=raw,value=latest
+          labels: |
+            org.opencontainers.image.licenses=AGPL-3.0-only
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: server/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # The public commit, as production does: /api/version, /version.json and the app's link to
+          # the source of this very build.
+          build-args: TUNNELIO_REVISION=${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: GitHub release notes
+        run: gh release create "$GITHUB_REF_NAME" --title "server ${GITHUB_REF_NAME#server/v}" --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

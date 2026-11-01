@@ -1,0 +1,59 @@
+# GoReleaser v2 — macOS only (runs on a macOS runner; systray needs CGO/Cocoa).
+# Produces a universal binary, wraps it in Tunnelio.app, signs + notarizes (placeholders) and
+# builds a DMG (no Homebrew cask yet: see the end of this file). Appends to the release created by
+# the Linux run.
+version: 2
+project_name: tunnelio
+# Tray releases are tagged vX.Y.Z (plain semver: the open-source GoReleaser has no tag prefixes);
+# the server image uses server/vX.Y.Z.
+dist: dist-darwin
+
+before:
+  hooks:
+    # THIRD_PARTY_LICENSES.txt: the licences of everything compiled in; build-app.sh puts it in the app.
+    - ./scripts/third-party-licenses.sh
+
+builds:
+  - id: tunnelio-darwin
+    main: ./cmd/tunnelio
+    binary: tunnelio
+    env: [CGO_ENABLED=1]
+    goos: [darwin]
+    goarch: [amd64, arm64]
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.defaultServerURL={{ .Env.TRAY_DEFAULT_SERVER_URL }}
+    flags: [-trimpath]
+    mod_timestamp: "{{ .CommitTimestamp }}"   # reproducible: same commit → same bytes
+
+universal_binaries:
+  - id: tunnelio-universal
+    ids: [tunnelio-darwin]
+    replace: true
+    name_template: tunnelio
+    hooks:
+      post:
+        # Builds Tunnelio.app (Info.plist with LSUIElement=1), codesigns, notarizes, makes the DMG.
+        # Env placeholders: APPLE_TEAM_ID, APPLE_SIGNING_IDENTITY, APPLE_ID, APPLE_APP_PASSWORD.
+        - cmd: packaging/macos/build-app.sh "{{ .Path }}" "{{ .Version }}"
+          output: true
+
+archives:
+  - id: darwin-dmg
+    ids: [tunnelio-universal]
+    formats: [none]          # only the DMG is published (release.extra_files below)
+
+checksum:
+  disable: true              # the DMG's checksum is added by the workflow (extra files are not hashed)
+
+release:
+  mode: append
+  prerelease: auto
+  github:
+    owner: ThiagoBzMd
+    name: tunnelio
+  extra_files:
+    - glob: dist-darwin/**/Tunnelio-macos.dmg   # built by the universal-binary hook, inside its dir
+# Homebrew: a cask in a tap repository can point at the DMG URL below once the app is notarized;
+# GoReleaser's cask pipe needs an archive artifact, which we do not publish.

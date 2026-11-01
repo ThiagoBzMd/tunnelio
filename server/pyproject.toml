@@ -1,0 +1,22 @@
+[project]
+name = "tunnelio-server"
+version = "0.0.0"
+description = "Tunnelio relay and accounts (Django 5.2 / Channels 4)."
+requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+exclude = ["*/migrations/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "DJ"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tunnelio.settings.test"
+python_files = ["test_*.py", "tests.py"]
+testpaths = ["tests", "accounts", "devices", "pairings", "preferences", "relay", "catalog"]
+asyncio_mode = "auto"
+pythonpath = ["."]

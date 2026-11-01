@@ -1,0 +1,101 @@
+These notices cover what the packages above carry without a licence file of their own: a package
+that ships none, the static files inside Django REST framework, and native code compiled into some
+of the packages. Then the operating system of the image.
+
+==============================================================================
+dj-email-url — BSD-2-Clause (the package ships no licence file)
+Copyright (c) 2013-2022 Miguel Gonzalez <migonzalvar@gmail.com>
+
+Redistribution and use in source and binary forms, with or without modification, are permitted
+provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions
+   and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of
+   conditions and the following disclaimer in the documentation and/or other materials provided
+   with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+Static files inside djangorestframework (rest_framework/static/)
+- Bootstrap 3.4.1 — MIT. Copyright 2011-2019 Twitter, Inc. It includes normalize.css 3.0.3 — MIT,
+  Copyright (c) Nicolas Gallagher and Jonathan Neal.
+- Glyphicons Halflings, the icon font and images of Bootstrap 3 — Copyright (c) 2014 Jan Kovarik,
+  made available for Bootstrap free of cost (https://glyphicons.com).
+- jQuery 3.7.1 — MIT. Copyright OpenJS Foundation and other contributors.
+- Font Awesome 4.0.3 by Dave Gandy (https://fontawesome.com) — the font under the SIL Open Font
+  License 1.1 (/usr/share/common-licenses/OFL-1.1), the CSS under MIT.
+- google-code-prettify — Apache-2.0 (/usr/share/common-licenses/Apache-2.0). Copyright (C) 2006
+  Google Inc.
+
+==============================================================================
+Native code compiled into some of the packages above
+- cryptography: OpenSSL — Apache-2.0, Copyright The OpenSSL Project Authors; and Rust crates, among
+  them asn1 (BSD-3-Clause), openssl (Apache-2.0), openssl-sys and pem (MIT), pyo3, base64, itoa and
+  once_cell (MIT OR Apache-2.0, used under MIT). The complete list is in cryptography's Cargo.lock.
+- watchfiles: Rust crates, among them notify (CC0-1.0), inotify (ISC), mio (MIT), walkdir and
+  same-file (Unlicense OR MIT, used under MIT), pyo3, log and once_cell (MIT OR Apache-2.0, used
+  under MIT). The complete list is in watchfiles' Cargo.lock.
+- cffi: libffi — MIT. Copyright (c) Anthony Green, Red Hat, Inc and others.
+- argon2-cffi-bindings: libargon2 — CC0-1.0 OR Apache-2.0, used under CC0-1.0. By Daniel Dinu,
+  Dmitry Khovratovich, Jean-Philippe Aumasson and Samuel Neves.
+- uvloop: libuv — MIT. Copyright (c) 2015-present libuv project contributors; portions Copyright
+  Joyent, Inc. and other Node contributors; a few files under BSD-2-Clause and ISC, as listed in
+  libuv's LICENSE.
+- PyYAML: libyaml — MIT. Copyright (c) 2017-2020 Ingy döt Net; Copyright (c) 2006-2016 Kirill
+  Simonov.
+- httptools: llhttp and http-parser — MIT; their licence files are above, with httptools.
+
+==============================================================================
+psycopg — LGPL-3.0-only
+psycopg is used unmodified, as a separate library that can be replaced: install another build of it
+in the image with pip, or rebuild the image. Its licence (the LGPL-3.0) is above; the GNU GPL-3.0
+that the LGPL-3.0 builds on is in /usr/share/common-licenses/GPL-3. Its source code:
+https://github.com/psycopg/psycopg
+
+==============================================================================
+The operating system: the python:3.12-slim image (Debian)
+- Python itself (CPython) is under the PSF License Agreement, with the notices of the code it
+  includes, in /usr/local/lib/python3.12/LICENSE.txt. pip is MIT (above).
+- Each Debian package keeps its licence in /usr/share/doc/<package>/copyright, with the common
+  licence texts in /usr/share/common-licenses/. `dpkg-query -W` lists the packages and their
+  versions. The source code of those exact versions is at https://snapshot.debian.org, and the
+  current one at https://sources.debian.org.
+- PostgreSQL's client library (libpq5) and the libraries it needs come from Debian too. Two of
+  their notices ask to be repeated:
+  - Cyrus SASL (libsasl2-2): "This product includes software developed by Computing Services at
+    Carnegie Mellon University (http://www.cmu.edu/computing/)."
+  - Berkeley DB (libdb5.3t64), Sleepycat licence: its complete source code, and that of the
+    software in this image that uses it, is available as described just above (Debian's sources;
+    Tunnelio's at https://github.com/ThiagoBzMd/tunnelio).
+- Written offer: for at least three years after each version of this image is published, we will
+  give anyone who asks a complete, machine-readable copy of the corresponding source code of the
+  software in it that is under the GPL or the LGPL, for no more than our cost of providing it (as a
+  download, that is free). Write to hello@tunnelio.app and say which image (its tag or digest).
+
+==============================================================================
+MIT License (for the MIT entries above; each with its own copyright line)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

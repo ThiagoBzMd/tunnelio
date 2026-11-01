@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MSIX manifest for the Microsoft Store (full-trust Win32 tray app with autostart).
+  Placeholders: PUBLISHER_CN (from Partner Center), PUBLISHER_DISPLAY_NAME, VERSION (x.y.z.0).
+  Packed by .github/workflows/release-tray.yml with makeappx.exe and signed with signtool.exe
+  (or submitted unsigned to the Store, which signs on ingestion).
+-->
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+         xmlns:desktop6="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap desktop desktop6 rescap">
+  <Identity Name="Tunnelio.Tunnelio" Publisher="CN=PUBLISHER_CN" Version="VERSION" ProcessorArchitecture="x64" />
+  <Properties>
+    <DisplayName>Tunnelio</DisplayName>
+    <PublisherDisplayName>PUBLISHER_DISPLAY_NAME</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <!-- Write to the real %AppData%\tunnelio (conversations, pairings) instead of the package's
+         private LocalCache, so uninstalling from the Store keeps the user's conversations, like
+         on macOS and Linux. -->
+    <desktop6:FileSystemWriteVirtualization>disabled</desktop6:FileSystemWriteVirtualization>
+    <desktop6:RegistryWriteVirtualization>disabled</desktop6:RegistryWriteVirtualization>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.22631.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="en-us" />
+    <Resource Language="pt-br" />
+  </Resources>
+  <Applications>
+    <Application Id="Tunnelio" Executable="tunnelio.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="Tunnelio" Description="Use your local Ollama models from any browser, end-to-end encrypted."
+                          BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" />
+      <Extensions>
+        <!-- Autostart (user can toggle in Task Manager → Startup); opt-in inside the app on first run. -->
+        <desktop:Extension Category="windows.startupTask" Executable="tunnelio.exe" EntryPoint="Windows.FullTrustApplication">
+          <desktop:StartupTask TaskId="TunnelioStartup" Enabled="false" DisplayName="Tunnelio" />
+        </desktop:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <rescap:Capability Name="runFullTrust" />
+    <!-- Required by the disabled write virtualization above (conversations stay in %AppData% after
+         an uninstall). Restricted capability: the Store submission asks for a justification. -->
+    <rescap:Capability Name="unvirtualizedResources" />
+  </Capabilities>
+</Package>

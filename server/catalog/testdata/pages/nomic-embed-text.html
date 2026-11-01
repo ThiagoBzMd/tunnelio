@@ -1,0 +1,92 @@
+<!-- Fixture for the parser's tests, with the structure of the tags section of ollama.com/library/nomic-embed-text: model tags, sizes and dates only. -->
+<section class="flex flex-1 flex-col">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-base font-semibold leading-6 text-neutral-900">Models</h2>
+    <a href="/library/nomic-embed-text/tags" class="text-sm text-neutral-500 cursor-pointer underline focus:outline-none">View all &#8594;</a>
+  </div>
+  <div class="overflow-hidden rounded-lg border border-neutral-200">
+    <div class="min-w-full divide-y divide-gray-200">
+      <div class="items-center grid bg-neutral-50 px-4 py-3 text-xs grid-cols-12 text-neutral-900">
+        <p class="hidden sm:block col-span-6">Name</p>
+        <p class="sm:hidden col-span-6">3 models</p>
+        <p class="col-span-2 hidden sm:block">Size / Usage</p>
+        <p class="col-span-2 hidden sm:block">Context</p>
+        <p class="col-span-2 hidden sm:block">Input</p>
+      </div>
+        <a href="/library/nomic-embed-text:latest" class="sm:hidden flex flex-col space-y-[6px] group text-[13px] px-4 py-3">
+          <span class="flex items-center">
+            <p class="block group-hover:underline text-sm font-medium text-neutral-800">nomic-embed-text:latest</p>
+          </span>
+          <p class="flex text-neutral-500">274MB · 2K context window · Text · 2 years ago</p>
+        </a>
+        <div class="hidden group px-4 py-3 sm:grid sm:grid-cols-12 text-[13px]">
+          <span class="col-span-6 flex items-center">
+            <a href="/library/nomic-embed-text:latest" class="block group-hover:underline text-sm font-medium text-neutral-800">nomic-embed-text:latest</a>
+            <input class="command hidden" value="nomic-embed-text:latest" />
+            <button
+              class="hidden group-hover:inline-flex ml-1.5 text-neutral-500 hover:text-black items-center"
+              onclick="copyToClipboard(this); event.preventDefault(); event.stopPropagation();"
+            >
+
+
+            </button>
+          </span>
+          <p  class="col-span-2 text-neutral-500">274MB</p>
+          <p class="col-span-2 text-neutral-500">2K</p>
+          <p class="col-span-2 text-neutral-500">
+            Text
+          </p>
+        </div>
+        <a href="/library/nomic-embed-text:v1.5" class="sm:hidden flex flex-col space-y-[6px] group text-[13px] px-4 py-3">
+          <span class="flex items-center">
+            <p class="block group-hover:underline text-sm font-medium text-neutral-800">nomic-embed-text:v1.5</p>
+            <span class="ml-2 inline-flex items-center rounded-full px-2 py-px text-xs font-medium border border-blue-500 text-blue-600">latest</span>
+          </span>
+          <p class="flex text-neutral-500">274MB · 2K context window · Text · 2 years ago</p>
+        </a>
+        <div class="hidden group px-4 py-3 sm:grid sm:grid-cols-12 text-[13px]">
+          <span class="col-span-6 flex items-center">
+            <a href="/library/nomic-embed-text:v1.5" class="block group-hover:underline text-sm font-medium text-neutral-800">nomic-embed-text:v1.5</a>
+            <span class="ml-2 inline-flex items-center rounded-full px-2 py-px text-xs font-medium border border-blue-500 text-blue-600">latest</span>
+            <input class="command hidden" value="nomic-embed-text:v1.5" />
+            <button
+              class="hidden group-hover:inline-flex ml-1.5 text-neutral-500 hover:text-black items-center"
+              onclick="copyToClipboard(this); event.preventDefault(); event.stopPropagation();"
+            >
+
+
+            </button>
+          </span>
+          <p  class="col-span-2 text-neutral-500">274MB</p>
+          <p class="col-span-2 text-neutral-500">2K</p>
+          <p class="col-span-2 text-neutral-500">
+            Text
+          </p>
+        </div>
+        <a href="/library/nomic-embed-text:137m-v1.5-fp16" class="sm:hidden flex flex-col space-y-[6px] group text-[13px] px-4 py-3">
+          <span class="flex items-center">
+            <p class="block group-hover:underline text-sm font-medium text-neutral-800">nomic-embed-text:137m-v1.5-fp16</p>
+          </span>
+          <p class="flex text-neutral-500">274MB · 2K context window · Text · 2 years ago</p>
+        </a>
+        <div class="hidden group px-4 py-3 sm:grid sm:grid-cols-12 text-[13px]">
+          <span class="col-span-6 flex items-center">
+            <a href="/library/nomic-embed-text:137m-v1.5-fp16" class="block group-hover:underline text-sm font-medium text-neutral-800">nomic-embed-text:137m-v1.5-fp16</a>
+            <input class="command hidden" value="nomic-embed-text:137m-v1.5-fp16" />
+            <button
+              class="hidden group-hover:inline-flex ml-1.5 text-neutral-500 hover:text-black items-center"
+              onclick="copyToClipboard(this); event.preventDefault(); event.stopPropagation();"
+            >
+
+
+            </button>
+          </span>
+          <p  class="col-span-2 text-neutral-500">274MB</p>
+          <p class="col-span-2 text-neutral-500">2K</p>
+          <p class="col-span-2 text-neutral-500">
+            Text
+          </p>
+        </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+# Enforces the tray security rules that can be checked statically (CONTRIBUTING.md, "Before you
+# write code"): os/exec only in internal/system; no network in the packages that handle what arrives
+# through the relay, the keys and the history (channel, crypto, history, pairing).
+version: "2"
+linters:
+  enable:
+    - depguard
+    - errcheck
+    - govet
+    - staticcheck
+    - gosec
+    - unused
+  settings:
+    depguard:
+      rules:
+        no-exec-outside-system:
+          files: ["!**/internal/system/**"]
+          deny:
+            - pkg: os/exec
+              desc: "os/exec is only allowed in internal/system (tray rule 4)"
+        no-net-in-channel:
+          files: ["**/internal/channel/**", "**/internal/crypto/**", "**/internal/history/**", "**/internal/pairing/**"]
+          deny:
+            - pkg: net/http
+              desc: "network only in internal/ollama, internal/relay and internal/localui"
+            - pkg: net
+              desc: "network only in internal/ollama, internal/relay and internal/localui"
+        ollama-only-loopback-helpers:
+          files: ["**/internal/ollama/**"]
+          deny:
+            - pkg: os/exec
+              desc: "ollama client never executes anything"

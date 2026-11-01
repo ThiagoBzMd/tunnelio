@@ -1,0 +1,23 @@
+name: Feature request
+description: An idea to make Tunnelio better.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: markdown
+    attributes:
+      value: |
+        Some limits are deliberate (the relay never reads content, the computer app accepts a closed list of requests). See "Before you write code" in CONTRIBUTING.md.

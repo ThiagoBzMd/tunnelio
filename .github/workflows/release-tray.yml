@@ -1,0 +1,187 @@
+# Release of the tray app on tags `vX.Y.Z` (plain semver; the server image uses `server/vX.Y.Z`).
+#
+#   linux-windows  ubuntu   GoReleaser (.goreleaser.yaml): Ubuntu .deb, Windows .zip, checksums, winget PR
+#   darwin         macOS    GoReleaser (.goreleaser.darwin.yaml): universal binary → .app → sign →
+#                           notarize → DMG (+ its checksum). Same GitHub release.
+#   msix           windows  MSIX for the Microsoft Store: kept as a workflow artifact (not a download)
+#                           and submitted via msstore-cli when the Partner Center secrets exist.
+# Downloads on the release page: one file per system (Tunnelio-ubuntu.deb, Tunnelio-macos.dmg,
+# Tunnelio-windows.zip; -arm64 variants for Ubuntu/Windows) plus the checksum files. Names carry
+# no version so releases/latest/download/<name> is a permanent link to the newest release.
+#
+# Secrets (placeholders — builds stay unsigned until they exist):
+#   APPLE_SIGNING_IDENTITY, APPLE_CERT_P12_BASE64, APPLE_CERT_PASSWORD, APPLE_ID,
+#   APPLE_APP_PASSWORD, APPLE_TEAM_ID, WINGET_TOKEN, WINDOWS_CERT_PFX_BASE64,
+#   WINDOWS_CERT_PASSWORD, MSSTORE_TENANT_ID, MSSTORE_CLIENT_ID, MSSTORE_CLIENT_SECRET,
+#   MSSTORE_SELLER_ID, MSSTORE_PRODUCT_ID, MSSTORE_PUBLISHER_CN
+# Variables (repo → Settings → Variables): TRAY_DEFAULT_SERVER_URL (e.g. https://app.example.com)
+name: Release tray
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+env:
+  TRAY_DEFAULT_SERVER_URL: ${{ vars.TRAY_DEFAULT_SERVER_URL }}
+
+jobs:
+  linux-windows:
+    runs-on: ubuntu-latest
+    permissions: { contents: write }   # creates the release
+    steps:
+      # Without it the installers would come with no server address at all.
+      - name: The installers' default server is set
+        run: |
+          if [ -z "$TRAY_DEFAULT_SERVER_URL" ]; then
+            echo "::error::Set the repository variable TRAY_DEFAULT_SERVER_URL (Settings → Secrets and variables → Actions → Variables)."
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.27.x"          # the newest patch release (go.mod's `go` line is the minimum)
+          check-latest: true
+          cache-dependency-path: tray/go.sum
+      - name: GoReleaser (linux + windows)
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          distribution: goreleaser
+          version: "~> v2"
+          workdir: tray
+          args: release --clean --config .goreleaser.yaml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WINGET_TOKEN: ${{ secrets.WINGET_TOKEN }}
+          GORELEASER_CURRENT_TAG: ${{ github.ref_name }}
+      # For the msix job only (the downloads are on the release): kept for a day.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tray-linux-windows
+          retention-days: 1
+          path: |
+            tray/dist/*.zip
+            tray/dist/*.deb
+            tray/dist/tunnelio_windows_amd64_v1/tunnelio.exe
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tray-notices
+          retention-days: 1
+          path: tray/THIRD_PARTY_LICENSES.txt
+
+  darwin:
+    runs-on: macos-14
+    needs: [linux-windows]      # the Linux run creates the release; this one appends
+    permissions: { contents: write }
+    env:
+      HAS_APPLE_CERT: ${{ secrets.APPLE_CERT_P12_BASE64 != '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.27.x"          # the newest patch release (go.mod's `go` line is the minimum)
+          check-latest: true
+          cache-dependency-path: tray/go.sum
+      - name: Import signing certificate (skipped without secrets)
+        if: env.HAS_APPLE_CERT == 'true'
+        env:
+          P12: ${{ secrets.APPLE_CERT_P12_BASE64 }}
+          P12_PASSWORD: ${{ secrets.APPLE_CERT_PASSWORD }}
+        run: |
+          echo "$P12" | base64 --decode > cert.p12
+          security create-keychain -p ci build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p ci build.keychain
+          security import cert.p12 -k build.keychain -P "$P12_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k ci build.keychain
+      - name: GoReleaser (darwin universal + app + dmg)
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          distribution: goreleaser
+          version: "~> v2"
+          workdir: tray
+          args: release --clean --config .goreleaser.darwin.yaml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GORELEASER_CURRENT_TAG: ${{ github.ref_name }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      - name: Checksum of the DMG (extra files are not hashed by GoReleaser)
+        run: |
+          cd tray/dist-darwin/tunnelio-universal_darwin_all
+          shasum -a 256 Tunnelio-*.dmg > checksums-macos.txt
+          gh release upload "$GITHUB_REF_NAME" checksums-macos.txt --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  msix:
+    runs-on: windows-latest
+    needs: [linux-windows]
+    env:
+      HAS_WINDOWS_CERT: ${{ secrets.WINDOWS_CERT_PFX_BASE64 != '' }}
+      HAS_MSSTORE: ${{ secrets.MSSTORE_CLIENT_ID != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: tray-linux-windows, path: artifacts }
+      - uses: actions/download-artifact@v4
+        with: { name: tray-notices, path: notices }
+      - name: Stage package
+        shell: pwsh
+        env:
+          MSSTORE_PUBLISHER_CN: ${{ secrets.MSSTORE_PUBLISHER_CN }}
+        run: |
+          # MSIX versions are numeric x.y.z.w: a prerelease suffix (-rc.1) is dropped.
+          $v = ($env:GITHUB_REF_NAME.TrimStart("v") -split "-")[0] + ".0"
+          New-Item -ItemType Directory -Force pkg/Assets | Out-Null
+          Copy-Item artifacts/tunnelio_windows_amd64_v1/tunnelio.exe pkg/
+          # Publisher CN comes from Partner Center once the Store account exists; until then a
+          # placeholder keeps makeappx happy (the Store rejects a mismatch, so it cannot slip through).
+          $cn = $env:MSSTORE_PUBLISHER_CN; if (-not $cn) { $cn = "Tunnelio" }
+          # -creplace: case-sensitive, so the <?xml version=…> declaration is left alone.
+          (Get-Content tray/packaging/windows/AppxManifest.xml) `
+            -creplace "VERSION", $v `
+            -creplace "PUBLISHER_CN", $cn `
+            -creplace "PUBLISHER_DISPLAY_NAME", "Tunnelio" | Set-Content pkg/AppxManifest.xml
+          Copy-Item tray/packaging/windows/Assets/*.png pkg/Assets/
+          Copy-Item tray/LICENSE pkg/LICENSE.txt
+          Copy-Item notices/THIRD_PARTY_LICENSES.txt pkg/
+      - name: makeappx pack
+        shell: pwsh
+        run: |
+          $sdk = Get-ChildItem "C:\Program Files (x86)\Windows Kits\10\bin\10.*\x64\makeappx.exe" | Sort-Object FullName -Descending | Select-Object -First 1
+          & $sdk.FullName pack /d pkg /p ("Tunnelio-" + $env:GITHUB_REF_NAME.TrimStart("v") + ".msix") /o
+      - name: Sign (skipped without certificate; the Store signs on ingestion)
+        if: env.HAS_WINDOWS_CERT == 'true'
+        shell: pwsh
+        env:
+          CERT_PFX_BASE64: ${{ secrets.WINDOWS_CERT_PFX_BASE64 }}
+          CERT_PASSWORD: ${{ secrets.WINDOWS_CERT_PASSWORD }}
+        run: |
+          [IO.File]::WriteAllBytes("cert.pfx", [Convert]::FromBase64String($env:CERT_PFX_BASE64))
+          $st = Get-ChildItem "C:\Program Files (x86)\Windows Kits\10\bin\10.*\x64\signtool.exe" | Sort-Object FullName -Descending | Select-Object -First 1
+          & $st.FullName sign /fd SHA256 /f cert.pfx /p $env:CERT_PASSWORD /tr http://timestamp.digicert.com /td SHA256 (Get-ChildItem *.msix).FullName
+      - name: Keep the package as a workflow artifact (Store submission only, not a download)
+        uses: actions/upload-artifact@v4
+        with:
+          name: msix
+          path: "*.msix"
+      - name: Submit to Microsoft Store (skipped without Partner Center secrets)
+        if: env.HAS_MSSTORE == 'true'
+        uses: microsoft/setup-msstore-cli@v1
+      - if: env.HAS_MSSTORE == 'true'
+        shell: pwsh
+        env:
+          MSSTORE_TENANT_ID: ${{ secrets.MSSTORE_TENANT_ID }}
+          MSSTORE_CLIENT_ID: ${{ secrets.MSSTORE_CLIENT_ID }}
+          MSSTORE_CLIENT_SECRET: ${{ secrets.MSSTORE_CLIENT_SECRET }}
+          MSSTORE_SELLER_ID: ${{ secrets.MSSTORE_SELLER_ID }}
+          MSSTORE_PRODUCT_ID: ${{ secrets.MSSTORE_PRODUCT_ID }}
+        run: |
+          msstore reconfigure --tenantId $env:MSSTORE_TENANT_ID --clientId $env:MSSTORE_CLIENT_ID --clientSecret $env:MSSTORE_CLIENT_SECRET --sellerId $env:MSSTORE_SELLER_ID
+          msstore publish (Get-ChildItem *.msix).FullName --appId $env:MSSTORE_PRODUCT_ID

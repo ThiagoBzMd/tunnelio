@@ -1,0 +1,106 @@
+# The production layout of tunnelio.app:
+#   site        the public site (tunnelio.app, www): a separate image built from the site's own
+#               folder (SITE_DIR), which is not part of this repository
+#   nginx       the web app (app.tunnelio.app; static files baked into the image) + reverse proxy for
+#               /api, /ws → tunnelio; the Django admin only on :81 (loopback), for a private network
+#               in front of it (e.g. `tailscale serve`), never on the public hostname
+#   tunnelio    Django + uvicorn (REST, relay, admin); no web files served in production
+#   db          Postgres 16 (DATABASE_URL in .env.prod)
+#   tunnel      optional outbound tunnel connector (tunnelio.app, www → site; app.tunnelio.app → nginx),
+#               so the server opens no ports; image and command from .env.prod (COMPOSE_PROFILES=tunnel)
+# Optional: redis (needed for UVICORN_WORKERS>1).
+# Variables: .env.prod (git-ignored; template in .env.prod.example). Symlink it as `.env` so the
+# `${…}` values below (image tags, ADMIN_URL_PATH, POSTGRES_USER, SITE_DIR) resolve without --env-file.
+# Images are built on the production server from its clone of this repository, at the commit being
+# deployed (deploy/update.sh); the project name is always `deploy` (`docker compose -p deploy`),
+# which keeps the containers and the volumes of the first install.
+services:
+  site:
+    image: tunnelio-site:latest
+    build:
+      context: ${SITE_DIR:-../../site/landing}
+      labels: { org.opencontainers.image.revision: "${SITE_REVISION:-unknown}" }
+    expose: ["80"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/site-health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  nginx:
+    image: ghcr.io/thiagobzmd/tunnelio-nginx:${TUNNELIO_NGINX_TAG:-latest}
+    build:
+      context: ..
+      dockerfile: deploy/nginx/Dockerfile
+      args: { TUNNELIO_REVISION: "${TUNNELIO_REVISION_FULL:-unknown}" }
+      labels: { org.opencontainers.image.revision: "${TUNNELIO_REVISION:-unknown}" }
+    expose: ["80"]
+    ports: ["127.0.0.1:8081:81"]       # the Django admin, loopback only; `tailscale serve` exposes it to the tailnet
+    environment:
+      ADMIN_URL_PATH: ${ADMIN_URL_PATH:-admin}   # the admin is proxied under this path only
+      CLIENT_IP_HEADER: ${CLIENT_IP_HEADER:-}    # the visitor's address, set by the proxy in front
+    depends_on:
+      tunnelio:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "--header=Host: app.tunnelio.app", "http://127.0.0.1/nginx-health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  tunnelio:
+    image: ghcr.io/thiagobzmd/tunnelio-server:${TUNNELIO_IMAGE_TAG:-latest}
+    build:
+      context: ..
+      dockerfile: server/Dockerfile
+      args: { TUNNELIO_REVISION: "${TUNNELIO_REVISION_FULL:-unknown}" }
+      labels: { org.opencontainers.image.revision: "${TUNNELIO_REVISION:-unknown}" }
+    expose: ["8080"]
+    volumes:
+      - tunnelio-data:/data
+    env_file: .env.prod
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  db:
+    image: postgres:16-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file: .env.prod                # POSTGRES_USER / POSTGRES_PASSWORD / POSTGRES_DB
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tunnelio} -d ${POSTGRES_DB:-tunnelio}"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  # Off unless COMPOSE_PROFILES includes `tunnel`. The connector, its command and its credentials
+  # come from .env.prod (TUNNEL_IMAGE, TUNNEL_COMMAND and the variables it reads).
+  tunnel:
+    image: ${TUNNEL_IMAGE:-}
+    command: ${TUNNEL_COMMAND:-}
+    profiles: [tunnel]
+    env_file: .env.prod
+    depends_on: [nginx, site]
+    restart: unless-stopped
+
+  # redis:
+  #   image: redis:7-alpine
+  #   restart: unless-stopped
+
+volumes:
+  tunnelio-data:
+  pgdata:

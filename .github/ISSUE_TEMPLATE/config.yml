@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability (privately)
+    url: https://github.com/ThiagoBzMd/tunnelio/security/advisories/new
+    about: Never in a public issue. See SECURITY.md.
+  - name: The hosted service at tunnelio.app
+    url: https://tunnelio.app
+    about: Questions about your account or the service.

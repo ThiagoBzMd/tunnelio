@@ -1,0 +1,9 @@
+# Local rehearsal of the production layout (no tunnel): publishes nginx on :8090 (and the site on
+# :8091 when SITE_DIR points at a site folder).
+#   docker compose -f docker-compose.prod.yml -f docker-compose.local.yml up -d db tunnelio nginx
+#   curl -H 'Host: app.tunnelio.app' http://localhost:8090/
+services:
+  nginx:
+    ports: ["8090:80"]
+  site:
+    ports: ["8091:80"]

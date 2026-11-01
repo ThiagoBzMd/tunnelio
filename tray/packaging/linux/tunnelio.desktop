@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Tunnelio
+Comment=Use your local Ollama models from any browser, end-to-end encrypted
+Exec=tunnelio
+Icon=tunnelio
+Terminal=false
+Categories=Network;Utility;
+StartupNotify=false

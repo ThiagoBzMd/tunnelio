@@ -1,0 +1,105 @@
+# GoReleaser v2 — Linux + Windows (runs on ubuntu-latest, CGO off).
+# macOS lives in .goreleaser.darwin.yaml (needs a macOS runner because of systray/Cocoa).
+version: 2
+project_name: tunnelio
+# Tray releases are tagged vX.Y.Z (plain semver: the open-source GoReleaser has no tag prefixes);
+# the server image uses server/vX.Y.Z.
+dist: dist
+
+before:
+  hooks:
+    # Fails the release when go.mod/go.sum are not tidy, instead of changing them while it builds.
+    - go mod tidy -diff
+    # Windows resources (exe icon, version info, DPI-aware manifest) → cmd/tunnelio/rsrc_windows_*.syso,
+    # picked up by `go build` for GOOS=windows only. Generated, never committed.
+    - go run github.com/tc-hib/go-winres@v0.3.3 make --in packaging/windows/winres.json --out cmd/tunnelio/rsrc --arch amd64,arm64 --product-version {{ .Version }} --file-version {{ .Version }}
+    # THIRD_PARTY_LICENSES.txt: the licences of everything compiled in, shipped in every package.
+    - ./scripts/third-party-licenses.sh
+    # The .deb's /usr/share/doc/tunnelio/copyright: the copyright line, then the licence's text.
+    - ./packaging/linux/copyright.sh
+
+builds:
+  - id: tunnelio
+    main: ./cmd/tunnelio
+    binary: tunnelio
+    env: [CGO_ENABLED=0]
+    goos: [linux, windows]
+    goarch: [amd64, arm64]     # amd64 is the plain download; arm64 gets a -arm64 suffix
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.defaultServerURL={{ .Env.TRAY_DEFAULT_SERVER_URL }}   # repo variable, not in source
+      - "{{ if eq .Os \"windows\" }}-H=windowsgui{{ end }}"           # no console window on Windows
+    flags: [-trimpath]
+    mod_timestamp: "{{ .CommitTimestamp }}"   # reproducible: same commit → same bytes
+
+archives:
+  # Windows: one zip (the Store package is built separately). Linux: the .deb below is the
+  # download; no tar.gz.
+  - id: default
+    formats: [none]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    # Version-less names so https://github.com/ThiagoBzMd/tunnelio/releases/latest/download/<name>
+    # always points at the newest release (the download page links there).
+    name_template: 'Tunnelio-windows{{ if ne .Arch "amd64" }}-{{ .Arch }}{{ end }}'
+    files: [LICENSE, README.md, THIRD_PARTY_LICENSES.txt]
+
+nfpms:
+  - id: deb
+    package_name: tunnelio
+    vendor: Tunnelio
+    homepage: https://github.com/ThiagoBzMd/tunnelio
+    maintainer: Thiago Bezerra Matias <hello@tunnelio.app>
+    description: Use your local Ollama models from any browser, end-to-end encrypted.
+    license: AGPL-3.0-only
+    formats: [deb]
+    file_name_template: 'Tunnelio-ubuntu{{ if ne .Arch "amd64" }}-{{ .Arch }}{{ end }}'
+    bindir: /usr/bin
+    recommends: ["xclip | xsel | wl-clipboard"]   # "click to copy" the pairing code
+    contents:
+      - src: packaging/linux/tunnelio.desktop
+        dst: /usr/share/applications/tunnelio.desktop
+      - src: packaging/linux/icons/hicolor/256x256/apps/tunnelio.png
+        dst: /usr/share/icons/hicolor/256x256/apps/tunnelio.png
+      - src: packaging/linux/copyright
+        dst: /usr/share/doc/tunnelio/copyright
+        file_info: { mode: 0644 }
+      - src: THIRD_PARTY_LICENSES.txt
+        dst: /usr/share/doc/tunnelio/THIRD_PARTY_LICENSES.txt
+        file_info: { mode: 0644 }
+
+checksum:
+  name_template: checksums-ubuntu-windows.txt
+
+release:
+  mode: append
+  prerelease: auto            # the darwin run appends to the same release
+  github:
+    owner: ThiagoBzMd
+    name: tunnelio
+  name_template: "Tunnelio {{ .Version }}"
+
+# winget (OSS feature): opens a PR against microsoft/winget-pkgs on every stable tag.
+winget:
+  - name: Tunnelio
+    publisher: Tunnelio
+    publisher_url: https://github.com/ThiagoBzMd/tunnelio
+    short_description: Use your local Ollama models from any browser, end-to-end encrypted.
+    license: AGPL-3.0-only
+    license_url: https://github.com/ThiagoBzMd/tunnelio/blob/main/tray/LICENSE
+    homepage: https://github.com/ThiagoBzMd/tunnelio
+    package_identifier: Tunnelio.Tunnelio
+    skip_upload: auto     # only on stable (non-prerelease) tags
+    repository:
+      owner: ThiagoBzMd
+      name: winget-pkgs
+      branch: "tunnelio-{{ .Version }}"
+      token: "{{ .Env.WINGET_TOKEN }}"
+      pull_request:
+        enabled: true
+        base:
+          owner: microsoft
+          name: winget-pkgs
+          branch: master

@@ -1,0 +1,6715 @@
+{
+ "source": "https://ollama.com/library?sort=popular",
+ "fetched_at": "2026-10-17T02:33:38.008497+00:00",
+ "models": [
+  {
+   "name": "llama3.1",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "8b",
+    "70b",
+    "405b"
+   ],
+   "pulls": 120400000,
+   "pulls_text": "120.4M",
+   "tags": 93,
+   "updated_at": "2024-11-30T22:34:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ],
+    "405b": [
+     243000000000,
+     243000000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-r1",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "1.5b",
+    "7b",
+    "8b",
+    "14b",
+    "32b",
+    "70b",
+    "671b"
+   ],
+   "pulls": 93800000,
+   "pulls_text": "93.8M",
+   "tags": 35,
+   "updated_at": "2025-07-02T06:09:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5200000000,
+     5200000000
+    ],
+    "1.5b": [
+     1100000000,
+     1100000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ],
+    "8b": [
+     5200000000,
+     5200000000
+    ],
+    "14b": [
+     9000000000,
+     9000000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ],
+    "671b": [
+     404000000000,
+     404000000000
+    ]
+   }
+  },
+  {
+   "name": "nomic-embed-text",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [],
+   "pulls": 90600000,
+   "pulls_text": "90.6M",
+   "tags": 3,
+   "updated_at": "2024-02-21T17:26:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     274000000,
+     274000000
+    ]
+   }
+  },
+  {
+   "name": "llama3.2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "1b",
+    "3b"
+   ],
+   "pulls": 85600000,
+   "pulls_text": "85.6M",
+   "tags": 63,
+   "updated_at": "2024-09-25T21:09:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2000000000,
+     2000000000
+    ],
+    "1b": [
+     1300000000,
+     1300000000
+    ],
+    "3b": [
+     2000000000,
+     2000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen2.5",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "0.5b",
+    "1.5b",
+    "3b",
+    "7b",
+    "14b",
+    "32b",
+    "72b"
+   ],
+   "pulls": 42700000,
+   "pulls_text": "42.7M",
+   "tags": 133,
+   "updated_at": "2024-09-19T16:42:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "0.5b": [
+     398000000,
+     398000000
+    ],
+    "1.5b": [
+     986000000,
+     986000000
+    ],
+    "3b": [
+     1900000000,
+     1900000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ],
+    "14b": [
+     9000000000,
+     9000000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ],
+    "72b": [
+     47000000000,
+     47000000000
+    ]
+   }
+  },
+  {
+   "name": "gemma3",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "270m",
+    "1b",
+    "4b",
+    "12b",
+    "27b"
+   ],
+   "pulls": 41200000,
+   "pulls_text": "41.2M",
+   "tags": 29,
+   "updated_at": "2026-10-09T15:09:00+00:00",
+   "updated_text": "1 week ago",
+   "size_bytes": {
+    "latest": [
+     3400000000,
+     3400000000
+    ],
+    "270m": [
+     292000000,
+     292000000
+    ],
+    "1b": [
+     806000000,
+     806000000
+    ],
+    "4b": [
+     3400000000,
+     3400000000
+    ],
+    "12b": [
+     8200000000,
+     8200000000
+    ],
+    "27b": [
+     17000000000,
+     17000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "0.6b",
+    "1.7b",
+    "4b",
+    "8b",
+    "14b",
+    "30b",
+    "32b",
+    "235b"
+   ],
+   "pulls": 40300000,
+   "pulls_text": "40.3M",
+   "tags": 58,
+   "updated_at": "2025-10-10T20:18:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5200000000,
+     5200000000
+    ],
+    "0.6b": [
+     523000000,
+     523000000
+    ],
+    "1.7b": [
+     1400000000,
+     1400000000
+    ],
+    "4b": [
+     2500000000,
+     2500000000
+    ],
+    "8b": [
+     5200000000,
+     5200000000
+    ],
+    "14b": [
+     9300000000,
+     9300000000
+    ],
+    "30b": [
+     19000000000,
+     19000000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ],
+    "235b": [
+     142000000000,
+     142000000000
+    ]
+   }
+  },
+  {
+   "name": "gemma2",
+   "capabilities": [],
+   "sizes": [
+    "2b",
+    "9b",
+    "27b"
+   ],
+   "pulls": 34900000,
+   "pulls_text": "34.9M",
+   "tags": 94,
+   "updated_at": "2024-08-01T18:51:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5400000000,
+     5400000000
+    ],
+    "2b": [
+     1600000000,
+     1600000000
+    ],
+    "9b": [
+     5400000000,
+     5400000000
+    ],
+    "27b": [
+     16000000000,
+     16000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 33900000,
+   "pulls_text": "33.9M",
+   "tags": 84,
+   "updated_at": "2025-07-13T00:56:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4400000000,
+     4400000000
+    ],
+    "7b": [
+     4400000000,
+     4400000000
+    ]
+   }
+  },
+  {
+   "name": "gemma4",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [
+    "e2b",
+    "e4b",
+    "12b",
+    "26b",
+    "31b"
+   ],
+   "pulls": 27100000,
+   "pulls_text": "27.1M",
+   "tags": 51,
+   "updated_at": "2026-10-12T22:18:00+00:00",
+   "updated_text": "4 days ago",
+   "size_bytes": {
+    "latest": [
+     6600000000,
+     9500000000
+    ],
+    "e2b": [
+     4600000000,
+     7500000000
+    ],
+    "e4b": [
+     6600000000,
+     9500000000
+    ],
+    "12b": [
+     7700000000,
+     8000000000
+    ],
+    "26b": [
+     16000000000,
+     19000000000
+    ],
+    "31b": [
+     19000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "llama3",
+   "capabilities": [],
+   "sizes": [
+    "8b",
+    "70b"
+   ],
+   "pulls": 25600000,
+   "pulls_text": "25.6M",
+   "tags": 68,
+   "updated_at": "2024-05-21T04:54:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3.5",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "0.8b",
+    "2b",
+    "4b",
+    "9b",
+    "27b",
+    "35b",
+    "122b"
+   ],
+   "pulls": 22500000,
+   "pulls_text": "22.5M",
+   "tags": 72,
+   "updated_at": "2026-10-13T17:35:00+00:00",
+   "updated_text": "3 days ago",
+   "size_bytes": {
+    "latest": [
+     6600000000,
+     7600000000
+    ],
+    "0.8b": [
+     1200000000,
+     1300000000
+    ],
+    "2b": [
+     2700000000,
+     3100000000
+    ],
+    "4b": [
+     3300000000,
+     4000000000
+    ],
+    "9b": [
+     6600000000,
+     7600000000
+    ],
+    "27b": [
+     17000000000,
+     20000000000
+    ],
+    "35b": [
+     22000000000,
+     22000000000
+    ],
+    "122b": [
+     81000000000,
+     81000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen2.5-coder",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "0.5b",
+    "1.5b",
+    "3b",
+    "7b",
+    "14b",
+    "32b"
+   ],
+   "pulls": 22500000,
+   "pulls_text": "22.5M",
+   "tags": 199,
+   "updated_at": "2025-05-28T01:19:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "0.5b": [
+     398000000,
+     398000000
+    ],
+    "1.5b": [
+     986000000,
+     986000000
+    ],
+    "3b": [
+     1900000000,
+     1900000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ],
+    "14b": [
+     9000000000,
+     9000000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "phi3",
+   "capabilities": [],
+   "sizes": [
+    "3.8b",
+    "14b"
+   ],
+   "pulls": 18300000,
+   "pulls_text": "18.3M",
+   "tags": 72,
+   "updated_at": "2024-07-30T18:53:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2200000000,
+     2200000000
+    ],
+    "3.8b": [
+     2200000000,
+     2200000000
+    ],
+    "14b": [
+     7900000000,
+     7900000000
+    ]
+   }
+  },
+  {
+   "name": "mxbai-embed-large",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "335m"
+   ],
+   "pulls": 15800000,
+   "pulls_text": "15.8M",
+   "tags": 4,
+   "updated_at": "2024-05-06T23:36:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     670000000,
+     670000000
+    ],
+    "335m": [
+     670000000,
+     670000000
+    ]
+   }
+  },
+  {
+   "name": "llava",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "7b",
+    "13b",
+    "34b"
+   ],
+   "pulls": 15200000,
+   "pulls_text": "15.2M",
+   "tags": 98,
+   "updated_at": "2024-02-01T08:41:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ],
+    "13b": [
+     8000000000,
+     8000000000
+    ],
+    "34b": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "gpt-oss",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [
+    "20b",
+    "120b"
+   ],
+   "pulls": 13900000,
+   "pulls_text": "13.9M",
+   "tags": 5,
+   "updated_at": "2026-10-09T15:23:00+00:00",
+   "updated_text": "1 week ago",
+   "size_bytes": {
+    "latest": [
+     14000000000,
+     14000000000
+    ],
+    "20b": [
+     14000000000,
+     14000000000
+    ],
+    "120b": [
+     65000000000,
+     65000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3-coder",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "30b",
+    "480b"
+   ],
+   "pulls": 10100000,
+   "pulls_text": "10.1M",
+   "tags": 9,
+   "updated_at": "2025-09-23T19:14:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ],
+    "30b": [
+     19000000000,
+     19000000000
+    ],
+    "480b": [
+     290000000000,
+     290000000000
+    ]
+   }
+  },
+  {
+   "name": "glm-ocr",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [],
+   "pulls": 8400000,
+   "pulls_text": "8.4M",
+   "tags": 3,
+   "updated_at": "2026-10-14T15:27:00+00:00",
+   "updated_text": "2 days ago",
+   "size_bytes": {
+    "latest": [
+     2700000000,
+     2700000000
+    ]
+   }
+  },
+  {
+   "name": "gemma",
+   "capabilities": [],
+   "sizes": [
+    "2b",
+    "7b"
+   ],
+   "pulls": 8400000,
+   "pulls_text": "8.4M",
+   "tags": 102,
+   "updated_at": "2024-04-09T13:37:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5000000000,
+     5000000000
+    ],
+    "2b": [
+     1700000000,
+     1700000000
+    ],
+    "7b": [
+     5000000000,
+     5000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen",
+   "capabilities": [],
+   "sizes": [
+    "0.5b",
+    "1.8b",
+    "4b",
+    "7b",
+    "14b",
+    "32b",
+    "72b",
+    "110b"
+   ],
+   "pulls": 8100000,
+   "pulls_text": "8.1M",
+   "tags": 379,
+   "updated_at": "2024-04-26T20:31:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2300000000,
+     2300000000
+    ],
+    "0.5b": [
+     395000000,
+     395000000
+    ],
+    "1.8b": [
+     1100000000,
+     1100000000
+    ],
+    "4b": [
+     2300000000,
+     2300000000
+    ],
+    "7b": [
+     4500000000,
+     4500000000
+    ],
+    "14b": [
+     8200000000,
+     8200000000
+    ],
+    "32b": [
+     18000000000,
+     18000000000
+    ],
+    "72b": [
+     41000000000,
+     41000000000
+    ],
+    "110b": [
+     63000000000,
+     63000000000
+    ]
+   }
+  },
+  {
+   "name": "phi4",
+   "capabilities": [],
+   "sizes": [
+    "14b"
+   ],
+   "pulls": 7800000,
+   "pulls_text": "7.8M",
+   "tags": 5,
+   "updated_at": "2025-01-08T18:08:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     9100000000,
+     9100000000
+    ],
+    "14b": [
+     9100000000,
+     9100000000
+    ]
+   }
+  },
+  {
+   "name": "bge-m3",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "567m"
+   ],
+   "pulls": 7700000,
+   "pulls_text": "7.7M",
+   "tags": 3,
+   "updated_at": "2024-08-07T00:07:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1200000000,
+     1200000000
+    ],
+    "567m": [
+     1200000000,
+     1200000000
+    ]
+   }
+  },
+  {
+   "name": "llama2",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b",
+    "70b"
+   ],
+   "pulls": 7600000,
+   "pulls_text": "7.6M",
+   "tags": 102,
+   "updated_at": "2023-12-27T21:21:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3.6",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "27b",
+    "35b"
+   ],
+   "pulls": 7100000,
+   "pulls_text": "7.1M",
+   "tags": 35,
+   "updated_at": "2026-10-13T03:08:00+00:00",
+   "updated_text": "3 days ago",
+   "size_bytes": {
+    "latest": [
+     23000000000,
+     24000000000
+    ],
+    "27b": [
+     18000000000,
+     19000000000
+    ],
+    "35b": [
+     23000000000,
+     24000000000
+    ]
+   }
+  },
+  {
+   "name": "codellama",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b",
+    "34b",
+    "70b"
+   ],
+   "pulls": 7100000,
+   "pulls_text": "7.1M",
+   "tags": 199,
+   "updated_at": "2024-07-18T17:31:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "34b": [
+     19000000000,
+     19000000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3-vl",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "2b",
+    "4b",
+    "8b",
+    "30b",
+    "32b",
+    "235b"
+   ],
+   "pulls": 6700000,
+   "pulls_text": "6.7M",
+   "tags": 57,
+   "updated_at": "2025-10-29T22:19:00+00:00",
+   "updated_text": "11 months ago",
+   "size_bytes": {
+    "latest": [
+     6100000000,
+     6100000000
+    ],
+    "2b": [
+     1900000000,
+     1900000000
+    ],
+    "4b": [
+     3300000000,
+     3300000000
+    ],
+    "8b": [
+     6100000000,
+     6100000000
+    ],
+    "30b": [
+     20000000000,
+     20000000000
+    ],
+    "32b": [
+     21000000000,
+     21000000000
+    ],
+    "235b": [
+     143000000000,
+     143000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "0.5b",
+    "1.5b",
+    "7b",
+    "72b"
+   ],
+   "pulls": 6300000,
+   "pulls_text": "6.3M",
+   "tags": 97,
+   "updated_at": "2024-09-11T02:17:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4400000000,
+     4400000000
+    ],
+    "0.5b": [
+     352000000,
+     352000000
+    ],
+    "1.5b": [
+     935000000,
+     935000000
+    ],
+    "7b": [
+     4400000000,
+     4400000000
+    ],
+    "72b": [
+     41000000000,
+     41000000000
+    ]
+   }
+  },
+  {
+   "name": "tinyllama",
+   "capabilities": [],
+   "sizes": [
+    "1.1b"
+   ],
+   "pulls": 6200000,
+   "pulls_text": "6.2M",
+   "tags": 36,
+   "updated_at": "2024-01-01T02:44:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     638000000,
+     638000000
+    ],
+    "1.1b": [
+     638000000,
+     638000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-nemo",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "12b"
+   ],
+   "pulls": 5700000,
+   "pulls_text": "5.7M",
+   "tags": 17,
+   "updated_at": "2025-07-23T18:43:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     7100000000,
+     7100000000
+    ],
+    "12b": [
+     7100000000,
+     7100000000
+    ]
+   }
+  },
+  {
+   "name": "minicpm-v",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "8b"
+   ],
+   "pulls": 5500000,
+   "pulls_text": "5.5M",
+   "tags": 17,
+   "updated_at": "2024-11-18T07:03:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5500000000,
+     5500000000
+    ],
+    "8b": [
+     5500000000,
+     5500000000
+    ]
+   }
+  },
+  {
+   "name": "llama3.2-vision",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "11b",
+    "90b"
+   ],
+   "pulls": 5500000,
+   "pulls_text": "5.5M",
+   "tags": 9,
+   "updated_at": "2025-05-22T19:15:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     7800000000,
+     7800000000
+    ],
+    "11b": [
+     7800000000,
+     7800000000
+    ],
+    "90b": [
+     55000000000,
+     55000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen2.5vl",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "3b",
+    "7b",
+    "32b",
+    "72b"
+   ],
+   "pulls": 5400000,
+   "pulls_text": "5.4M",
+   "tags": 17,
+   "updated_at": "2025-05-22T21:01:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     6000000000,
+     6000000000
+    ],
+    "3b": [
+     3200000000,
+     3200000000
+    ],
+    "7b": [
+     6000000000,
+     6000000000
+    ],
+    "32b": [
+     21000000000,
+     21000000000
+    ],
+    "72b": [
+     49000000000,
+     49000000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-coder",
+   "capabilities": [],
+   "sizes": [
+    "1.3b",
+    "6.7b",
+    "33b"
+   ],
+   "pulls": 4700000,
+   "pulls_text": "4.7M",
+   "tags": 102,
+   "updated_at": "2023-12-28T01:05:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     776000000,
+     776000000
+    ],
+    "1.3b": [
+     776000000,
+     776000000
+    ],
+    "6.7b": [
+     3800000000,
+     3800000000
+    ],
+    "33b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3-embedding",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "0.6b",
+    "4b",
+    "8b"
+   ],
+   "pulls": 4300000,
+   "pulls_text": "4.3M",
+   "tags": 12,
+   "updated_at": "2025-09-23T20:26:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "0.6b": [
+     639000000,
+     639000000
+    ],
+    "4b": [
+     2500000000,
+     2500000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ]
+   }
+  },
+  {
+   "name": "llama3.3",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "70b"
+   ],
+   "pulls": 4300000,
+   "pulls_text": "4.3M",
+   "tags": 14,
+   "updated_at": "2024-12-06T19:13:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     43000000000,
+     43000000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ]
+   }
+  },
+  {
+   "name": "dolphin3",
+   "capabilities": [],
+   "sizes": [
+    "8b"
+   ],
+   "pulls": 4200000,
+   "pulls_text": "4.2M",
+   "tags": 5,
+   "updated_at": "2025-01-05T19:38:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3.8",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "27b"
+   ],
+   "pulls": 4100000,
+   "pulls_text": "4.1M",
+   "tags": 12,
+   "updated_at": "2026-09-25T02:43:00+00:00",
+   "updated_text": "3 weeks ago",
+   "size_bytes": {
+    "latest": [
+     18000000000,
+     18000000000
+    ],
+    "27b": [
+     18000000000,
+     18000000000
+    ]
+   }
+  },
+  {
+   "name": "smollm2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "135m",
+    "360m",
+    "1.7b"
+   ],
+   "pulls": 4100000,
+   "pulls_text": "4.1M",
+   "tags": 49,
+   "updated_at": "2024-11-01T04:57:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     1800000000,
+     1800000000
+    ],
+    "135m": [
+     271000000,
+     271000000
+    ],
+    "360m": [
+     726000000,
+     726000000
+    ],
+    "1.7b": [
+     1800000000,
+     1800000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-v3",
+   "capabilities": [],
+   "sizes": [
+    "671b"
+   ],
+   "pulls": 3800000,
+   "pulls_text": "3.8M",
+   "tags": 5,
+   "updated_at": "2025-01-13T17:16:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     404000000000,
+     404000000000
+    ],
+    "671b": [
+     404000000000,
+     404000000000
+    ]
+   }
+  },
+  {
+   "name": "olmo2",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b"
+   ],
+   "pulls": 3800000,
+   "pulls_text": "3.8M",
+   "tags": 9,
+   "updated_at": "2025-01-11T22:43:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4500000000,
+     4500000000
+    ],
+    "7b": [
+     4500000000,
+     4500000000
+    ],
+    "13b": [
+     8400000000,
+     8400000000
+    ]
+   }
+  },
+  {
+   "name": "all-minilm",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "22m",
+    "33m"
+   ],
+   "pulls": 3800000,
+   "pulls_text": "3.8M",
+   "tags": 10,
+   "updated_at": "2024-05-06T23:38:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     46000000,
+     46000000
+    ],
+    "22m": [
+     46000000,
+     46000000
+    ],
+    "33m": [
+     67000000,
+     67000000
+    ]
+   }
+  },
+  {
+   "name": "codegemma",
+   "capabilities": [],
+   "sizes": [
+    "2b",
+    "7b"
+   ],
+   "pulls": 3300000,
+   "pulls_text": "3.3M",
+   "tags": 85,
+   "updated_at": "2024-07-18T17:38:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5000000000,
+     5000000000
+    ],
+    "2b": [
+     1600000000,
+     1600000000
+    ],
+    "7b": [
+     5000000000,
+     5000000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-coder-v2",
+   "capabilities": [],
+   "sizes": [
+    "16b",
+    "236b"
+   ],
+   "pulls": 3200000,
+   "pulls_text": "3.2M",
+   "tags": 64,
+   "updated_at": "2024-09-06T03:33:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     8900000000,
+     8900000000
+    ],
+    "16b": [
+     8900000000,
+     8900000000
+    ],
+    "236b": [
+     133000000000,
+     133000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-small",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "22b",
+    "24b"
+   ],
+   "pulls": 3200000,
+   "pulls_text": "3.2M",
+   "tags": 21,
+   "updated_at": "2025-01-30T15:58:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     14000000000,
+     14000000000
+    ],
+    "22b": [
+     13000000000,
+     13000000000
+    ],
+    "24b": [
+     14000000000,
+     14000000000
+    ]
+   }
+  },
+  {
+   "name": "snowflake-arctic-embed",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "22m",
+    "33m",
+    "110m",
+    "137m",
+    "335m"
+   ],
+   "pulls": 3200000,
+   "pulls_text": "3.2M",
+   "tags": 16,
+   "updated_at": "2024-04-16T16:06:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     669000000,
+     669000000
+    ],
+    "22m": [
+     46000000,
+     46000000
+    ],
+    "33m": [
+     67000000,
+     67000000
+    ],
+    "110m": [
+     219000000,
+     219000000
+    ],
+    "137m": [
+     274000000,
+     274000000
+    ],
+    "335m": [
+     669000000,
+     669000000
+    ]
+   }
+  },
+  {
+   "name": "orca-mini",
+   "capabilities": [],
+   "sizes": [
+    "3b",
+    "7b",
+    "13b",
+    "70b"
+   ],
+   "pulls": 3100000,
+   "pulls_text": "3.1M",
+   "tags": 119,
+   "updated_at": "2023-10-29T05:30:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2000000000,
+     2000000000
+    ],
+    "3b": [
+     2000000000,
+     2000000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "granite3.1-moe",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "1b",
+    "3b"
+   ],
+   "pulls": 3100000,
+   "pulls_text": "3.1M",
+   "tags": 33,
+   "updated_at": "2025-01-17T22:18:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     2000000000,
+     2000000000
+    ],
+    "1b": [
+     1400000000,
+     1400000000
+    ],
+    "3b": [
+     2000000000,
+     2000000000
+    ]
+   }
+  },
+  {
+   "name": "starcoder2",
+   "capabilities": [],
+   "sizes": [
+    "3b",
+    "7b",
+    "15b"
+   ],
+   "pulls": 3000000,
+   "pulls_text": "3M",
+   "tags": 67,
+   "updated_at": "2024-09-06T23:42:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1700000000,
+     1700000000
+    ],
+    "3b": [
+     1700000000,
+     1700000000
+    ],
+    "7b": [
+     4000000000,
+     4000000000
+    ],
+    "15b": [
+     9100000000,
+     9100000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron-3-super",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [
+    "120b"
+   ],
+   "pulls": 3000000,
+   "pulls_text": "3M",
+   "tags": 7,
+   "updated_at": "2026-03-11T16:00:00+00:00",
+   "updated_text": "7 months ago",
+   "size_bytes": {
+    "latest": [
+     87000000000,
+     87000000000
+    ],
+    "120b": [
+     87000000000,
+     87000000000
+    ]
+   }
+  },
+  {
+   "name": "mixtral",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "8x7b",
+    "8x22b"
+   ],
+   "pulls": 2900000,
+   "pulls_text": "2.9M",
+   "tags": 70,
+   "updated_at": "2024-12-20T08:27:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     26000000000,
+     26000000000
+    ],
+    "8x7b": [
+     26000000000,
+     26000000000
+    ],
+    "8x22b": [
+     80000000000,
+     80000000000
+    ]
+   }
+  },
+  {
+   "name": "llama2-uncensored",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "70b"
+   ],
+   "pulls": 2700000,
+   "pulls_text": "2.7M",
+   "tags": 34,
+   "updated_at": "2023-10-29T02:31:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "translategemma",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "4b",
+    "12b",
+    "27b"
+   ],
+   "pulls": 2700000,
+   "pulls_text": "2.7M",
+   "tags": 13,
+   "updated_at": "2026-01-16T20:57:00+00:00",
+   "updated_text": "9 months ago",
+   "size_bytes": {
+    "latest": [
+     3300000000,
+     3300000000
+    ],
+    "4b": [
+     3300000000,
+     3300000000
+    ],
+    "12b": [
+     8100000000,
+     8100000000
+    ],
+    "27b": [
+     17000000000,
+     17000000000
+    ]
+   }
+  },
+  {
+   "name": "falcon3",
+   "capabilities": [],
+   "sizes": [
+    "1b",
+    "3b",
+    "7b",
+    "10b"
+   ],
+   "pulls": 2600000,
+   "pulls_text": "2.6M",
+   "tags": 17,
+   "updated_at": "2024-12-17T23:32:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4600000000,
+     4600000000
+    ],
+    "1b": [
+     1800000000,
+     1800000000
+    ],
+    "3b": [
+     2000000000,
+     2000000000
+    ],
+    "7b": [
+     4600000000,
+     4600000000
+    ],
+    "10b": [
+     6300000000,
+     6300000000
+    ]
+   }
+  },
+  {
+   "name": "embeddinggemma",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "300m"
+   ],
+   "pulls": 2500000,
+   "pulls_text": "2.5M",
+   "tags": 5,
+   "updated_at": "2025-09-09T00:17:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     622000000,
+     622000000
+    ],
+    "300m": [
+     622000000,
+     622000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-small3.2",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [
+    "24b"
+   ],
+   "pulls": 2500000,
+   "pulls_text": "2.5M",
+   "tags": 5,
+   "updated_at": "2025-06-20T22:59:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     15000000000,
+     15000000000
+    ],
+    "24b": [
+     15000000000,
+     15000000000
+    ]
+   }
+  },
+  {
+   "name": "minimax-m2.7",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 2400000,
+   "pulls_text": "2.4M",
+   "tags": null,
+   "updated_at": "2026-03-18T18:05:00+00:00",
+   "updated_text": "7 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "llava-llama3",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "8b"
+   ],
+   "pulls": 2300000,
+   "pulls_text": "2.3M",
+   "tags": 4,
+   "updated_at": "2024-05-07T21:01:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5500000000,
+     5500000000
+    ],
+    "8b": [
+     5500000000,
+     5500000000
+    ]
+   }
+  },
+  {
+   "name": "gemma3n",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "e2b",
+    "e4b"
+   ],
+   "pulls": 2300000,
+   "pulls_text": "2.3M",
+   "tags": 11,
+   "updated_at": "2026-10-14T17:10:00+00:00",
+   "updated_text": "2 days ago",
+   "size_bytes": {
+    "latest": [
+     9800000000,
+     9800000000
+    ],
+    "e2b": [
+     7800000000,
+     7800000000
+    ],
+    "e4b": [
+     9800000000,
+     9800000000
+    ]
+   }
+  },
+  {
+   "name": "qwq",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "32b"
+   ],
+   "pulls": 2300000,
+   "pulls_text": "2.3M",
+   "tags": 8,
+   "updated_at": "2025-03-13T18:55:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     20000000000,
+     20000000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "smollm",
+   "capabilities": [],
+   "sizes": [
+    "135m",
+    "360m",
+    "1.7b"
+   ],
+   "pulls": 2300000,
+   "pulls_text": "2.3M",
+   "tags": 94,
+   "updated_at": "2024-08-20T17:04:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     991000000,
+     991000000
+    ],
+    "135m": [
+     92000000,
+     92000000
+    ],
+    "360m": [
+     229000000,
+     229000000
+    ],
+    "1.7b": [
+     991000000,
+     991000000
+    ]
+   }
+  },
+  {
+   "name": "dolphin-llama3",
+   "capabilities": [],
+   "sizes": [
+    "8b",
+    "70b"
+   ],
+   "pulls": 2200000,
+   "pulls_text": "2.2M",
+   "tags": 53,
+   "updated_at": "2024-05-10T22:04:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "cogito",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "3b",
+    "8b",
+    "14b",
+    "32b",
+    "70b"
+   ],
+   "pulls": 2100000,
+   "pulls_text": "2.1M",
+   "tags": 20,
+   "updated_at": "2025-04-08T17:38:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "3b": [
+     2200000000,
+     2200000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ],
+    "14b": [
+     9000000000,
+     9000000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ]
+   }
+  },
+  {
+   "name": "sqlcoder",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "15b"
+   ],
+   "pulls": 2100000,
+   "pulls_text": "2.1M",
+   "tags": 48,
+   "updated_at": "2024-02-01T04:26:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ],
+    "15b": [
+     9000000000,
+     9000000000
+    ]
+   }
+  },
+  {
+   "name": "glm-4.7-flash",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 2100000,
+   "pulls_text": "2.1M",
+   "tags": 4,
+   "updated_at": "2026-06-05T16:16:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3-coder-next",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [],
+   "pulls": 2100000,
+   "pulls_text": "2.1M",
+   "tags": 3,
+   "updated_at": "2026-02-04T07:46:00+00:00",
+   "updated_text": "8 months ago",
+   "size_bytes": {
+    "latest": [
+     52000000000,
+     52000000000
+    ]
+   }
+  },
+  {
+   "name": "moondream",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "1.8b"
+   ],
+   "pulls": 2000000,
+   "pulls_text": "2M",
+   "tags": 18,
+   "updated_at": "2024-05-07T21:18:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1700000000,
+     1700000000
+    ],
+    "1.8b": [
+     1700000000,
+     1700000000
+    ]
+   }
+  },
+  {
+   "name": "dolphin-mixtral",
+   "capabilities": [],
+   "sizes": [
+    "8x7b",
+    "8x22b"
+   ],
+   "pulls": 1900000,
+   "pulls_text": "1.9M",
+   "tags": 70,
+   "updated_at": "2024-12-20T02:11:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     26000000000,
+     26000000000
+    ],
+    "8x7b": [
+     26000000000,
+     26000000000
+    ],
+    "8x22b": [
+     80000000000,
+     80000000000
+    ]
+   }
+  },
+  {
+   "name": "devstral-small-2",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [
+    "24b"
+   ],
+   "pulls": 1900000,
+   "pulls_text": "1.9M",
+   "tags": 6,
+   "updated_at": "2025-12-13T06:47:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     15000000000,
+     15000000000
+    ],
+    "24b": [
+     15000000000,
+     15000000000
+    ]
+   }
+  },
+  {
+   "name": "llama4",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [
+    "16x17b",
+    "128x17b"
+   ],
+   "pulls": 1900000,
+   "pulls_text": "1.9M",
+   "tags": 11,
+   "updated_at": "2025-06-16T20:45:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     67000000000,
+     67000000000
+    ],
+    "16x17b": [
+     67000000000,
+     67000000000
+    ],
+    "128x17b": [
+     245000000000,
+     245000000000
+    ]
+   }
+  },
+  {
+   "name": "dolphin-mistral",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1800000,
+   "pulls_text": "1.8M",
+   "tags": 120,
+   "updated_at": "2024-03-31T23:34:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "hermes3",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "3b",
+    "8b",
+    "70b",
+    "405b"
+   ],
+   "pulls": 1700000,
+   "pulls_text": "1.7M",
+   "tags": 65,
+   "updated_at": "2024-12-16T08:56:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "3b": [
+     2000000000,
+     2000000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ],
+    "405b": [
+     229000000000,
+     229000000000
+    ]
+   }
+  },
+  {
+   "name": "phi4-reasoning",
+   "capabilities": [],
+   "sizes": [
+    "14b"
+   ],
+   "pulls": 1700000,
+   "pulls_text": "1.7M",
+   "tags": 9,
+   "updated_at": "2025-05-01T05:32:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     11000000000,
+     11000000000
+    ],
+    "14b": [
+     11000000000,
+     11000000000
+    ]
+   }
+  },
+  {
+   "name": "granite-code",
+   "capabilities": [],
+   "sizes": [
+    "3b",
+    "8b",
+    "20b",
+    "34b"
+   ],
+   "pulls": 1600000,
+   "pulls_text": "1.6M",
+   "tags": 162,
+   "updated_at": "2024-09-03T00:45:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2000000000,
+     2000000000
+    ],
+    "3b": [
+     2000000000,
+     2000000000
+    ],
+    "8b": [
+     4600000000,
+     4600000000
+    ],
+    "20b": [
+     12000000000,
+     12000000000
+    ],
+    "34b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "dolphin-phi",
+   "capabilities": [],
+   "sizes": [
+    "2.7b"
+   ],
+   "pulls": 1600000,
+   "pulls_text": "1.6M",
+   "tags": 15,
+   "updated_at": "2023-12-24T16:37:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1600000000,
+     1600000000
+    ],
+    "2.7b": [
+     1600000000,
+     1600000000
+    ]
+   }
+  },
+  {
+   "name": "starcoder",
+   "capabilities": [],
+   "sizes": [
+    "1b",
+    "3b",
+    "7b",
+    "15b"
+   ],
+   "pulls": 1600000,
+   "pulls_text": "1.6M",
+   "tags": 100,
+   "updated_at": "2023-10-24T09:19:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1800000000,
+     1800000000
+    ],
+    "1b": [
+     726000000,
+     726000000
+    ],
+    "3b": [
+     1800000000,
+     1800000000
+    ],
+    "7b": [
+     4300000000,
+     4300000000
+    ],
+    "15b": [
+     9000000000,
+     9000000000
+    ]
+   }
+  },
+  {
+   "name": "phi",
+   "capabilities": [],
+   "sizes": [
+    "2.7b"
+   ],
+   "pulls": 1600000,
+   "pulls_text": "1.6M",
+   "tags": 18,
+   "updated_at": "2024-01-06T17:10:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1600000000,
+     1600000000
+    ],
+    "2.7b": [
+     1600000000,
+     1600000000
+    ]
+   }
+  },
+  {
+   "name": "command-r",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "35b"
+   ],
+   "pulls": 1600000,
+   "pulls_text": "1.6M",
+   "tags": 32,
+   "updated_at": "2024-08-30T23:38:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ],
+    "35b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "granite4",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "350m",
+    "1b",
+    "3b"
+   ],
+   "pulls": 1500000,
+   "pulls_text": "1.5M",
+   "tags": 17,
+   "updated_at": "2025-10-29T13:53:00+00:00",
+   "updated_text": "11 months ago",
+   "size_bytes": {
+    "latest": [
+     2100000000,
+     2100000000
+    ],
+    "350m": [
+     708000000,
+     708000000
+    ],
+    "1b": [
+     3300000000,
+     3300000000
+    ],
+    "3b": [
+     2100000000,
+     2100000000
+    ]
+   }
+  },
+  {
+   "name": "phi4-mini",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "3.8b"
+   ],
+   "pulls": 1500000,
+   "pulls_text": "1.5M",
+   "tags": 5,
+   "updated_at": "2025-02-28T20:02:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     2500000000,
+     2500000000
+    ],
+    "3.8b": [
+     2500000000,
+     2500000000
+    ]
+   }
+  },
+  {
+   "name": "yi",
+   "capabilities": [],
+   "sizes": [
+    "6b",
+    "9b",
+    "34b"
+   ],
+   "pulls": 1500000,
+   "pulls_text": "1.5M",
+   "tags": 174,
+   "updated_at": "2024-05-13T08:22:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3500000000,
+     3500000000
+    ],
+    "6b": [
+     3500000000,
+     3500000000
+    ],
+    "9b": [
+     5000000000,
+     5000000000
+    ],
+    "34b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "ministral-3",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [
+    "3b",
+    "8b",
+    "14b"
+   ],
+   "pulls": 1500000,
+   "pulls_text": "1.5M",
+   "tags": 13,
+   "updated_at": "2025-12-13T01:59:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     6000000000,
+     6000000000
+    ],
+    "3b": [
+     3000000000,
+     3000000000
+    ],
+    "8b": [
+     6000000000,
+     6000000000
+    ],
+    "14b": [
+     9100000000,
+     9100000000
+    ]
+   }
+  },
+  {
+   "name": "wizardcoder",
+   "capabilities": [],
+   "sizes": [
+    "33b"
+   ],
+   "pulls": 1500000,
+   "pulls_text": "1.5M",
+   "tags": 67,
+   "updated_at": "2024-01-05T05:09:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "33b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "magistral",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "24b"
+   ],
+   "pulls": 1500000,
+   "pulls_text": "1.5M",
+   "tags": 5,
+   "updated_at": "2025-06-16T20:46:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     14000000000,
+     14000000000
+    ],
+    "24b": [
+     14000000000,
+     14000000000
+    ]
+   }
+  },
+  {
+   "name": "openhermes",
+   "capabilities": [],
+   "sizes": [],
+   "pulls": 1400000,
+   "pulls_text": "1.4M",
+   "tags": 35,
+   "updated_at": "2023-12-29T21:45:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "openchat",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1400000,
+   "pulls_text": "1.4M",
+   "tags": 50,
+   "updated_at": "2024-01-10T21:45:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "codestral",
+   "capabilities": [],
+   "sizes": [
+    "22b"
+   ],
+   "pulls": 1400000,
+   "pulls_text": "1.4M",
+   "tags": 17,
+   "updated_at": "2024-09-03T21:32:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     13000000000,
+     13000000000
+    ],
+    "22b": [
+     13000000000,
+     13000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-large",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "123b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 32,
+   "updated_at": "2024-11-22T21:28:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     73000000000,
+     73000000000
+    ],
+    "123b": [
+     73000000000,
+     73000000000
+    ]
+   }
+  },
+  {
+   "name": "wizard-vicuna-uncensored",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b",
+    "30b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 49,
+   "updated_at": "2023-10-28T17:20:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "30b": [
+     18000000000,
+     18000000000
+    ]
+   }
+  },
+  {
+   "name": "zephyr",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "141b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 40,
+   "updated_at": "2024-04-16T00:10:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ],
+    "141b": [
+     80000000000,
+     80000000000
+    ]
+   }
+  },
+  {
+   "name": "lfm2.5-thinking",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "1.2b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 5,
+   "updated_at": "2026-01-20T12:41:00+00:00",
+   "updated_text": "8 months ago",
+   "size_bytes": {
+    "latest": [
+     731000000,
+     731000000
+    ],
+    "1.2b": [
+     731000000,
+     731000000
+    ]
+   }
+  },
+  {
+   "name": "vicuna",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b",
+    "33b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 111,
+   "updated_at": "2023-10-28T16:30:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "33b": [
+     18000000000,
+     18000000000
+    ]
+   }
+  },
+  {
+   "name": "deepscaler",
+   "capabilities": [],
+   "sizes": [
+    "1.5b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 5,
+   "updated_at": "2025-02-12T01:53:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     3600000000,
+     3600000000
+    ],
+    "1.5b": [
+     3600000000,
+     3600000000
+    ]
+   }
+  },
+  {
+   "name": "glm4",
+   "capabilities": [],
+   "sizes": [
+    "9b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 32,
+   "updated_at": "2024-07-09T01:21:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5500000000,
+     5500000000
+    ],
+    "9b": [
+     5500000000,
+     5500000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-llm",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "67b"
+   ],
+   "pulls": 1300000,
+   "pulls_text": "1.3M",
+   "tags": 64,
+   "updated_at": "2023-12-11T19:53:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4000000000,
+     4000000000
+    ],
+    "7b": [
+     4000000000,
+     4000000000
+    ],
+    "67b": [
+     38000000000,
+     38000000000
+    ]
+   }
+  },
+  {
+   "name": "nous-hermes",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 63,
+   "updated_at": "2023-10-29T11:35:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-v2",
+   "capabilities": [],
+   "sizes": [
+    "16b",
+    "236b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 34,
+   "updated_at": "2024-06-22T12:56:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     8900000000,
+     8900000000
+    ],
+    "16b": [
+     8900000000,
+     8900000000
+    ],
+    "236b": [
+     133000000000,
+     133000000000
+    ]
+   }
+  },
+  {
+   "name": "wizardlm2",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "8x22b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 22,
+   "updated_at": "2024-04-16T00:46:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ],
+    "8x22b": [
+     80000000000,
+     80000000000
+    ]
+   }
+  },
+  {
+   "name": "falcon",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "40b",
+    "180b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 38,
+   "updated_at": "2023-10-26T01:41:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4200000000,
+     4200000000
+    ],
+    "7b": [
+     4200000000,
+     4200000000
+    ],
+    "40b": [
+     24000000000,
+     24000000000
+    ],
+    "180b": [
+     101000000000,
+     101000000000
+    ]
+   }
+  },
+  {
+   "name": "neural-chat",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 50,
+   "updated_at": "2023-12-20T17:02:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "openthinker",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "32b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 15,
+   "updated_at": "2025-04-04T21:52:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen2-math",
+   "capabilities": [],
+   "sizes": [
+    "1.5b",
+    "7b",
+    "72b"
+   ],
+   "pulls": 1200000,
+   "pulls_text": "1.2M",
+   "tags": 52,
+   "updated_at": "2024-08-30T21:09:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4400000000,
+     4400000000
+    ],
+    "1.5b": [
+     935000000,
+     935000000
+    ],
+    "7b": [
+     4400000000,
+     4400000000
+    ],
+    "72b": [
+     41000000000,
+     41000000000
+    ]
+   }
+  },
+  {
+   "name": "llama2-chinese",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 35,
+   "updated_at": "2023-10-28T22:17:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "codeqwen",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 30,
+   "updated_at": "2024-06-24T07:00:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4200000000,
+     4200000000
+    ],
+    "7b": [
+     4200000000,
+     4200000000
+    ]
+   }
+  },
+  {
+   "name": "lfm2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "24b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 6,
+   "updated_at": "2026-02-24T01:17:00+00:00",
+   "updated_text": "7 months ago",
+   "size_bytes": {
+    "latest": [
+     14000000000,
+     14000000000
+    ],
+    "24b": [
+     14000000000,
+     14000000000
+    ]
+   }
+  },
+  {
+   "name": "granite3.3",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "2b",
+    "8b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 3,
+   "updated_at": "2025-04-16T14:49:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "2b": [
+     1500000000,
+     1500000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ]
+   }
+  },
+  {
+   "name": "stablelm2",
+   "capabilities": [],
+   "sizes": [
+    "1.6b",
+    "12b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 84,
+   "updated_at": "2024-05-07T02:11:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     983000000,
+     983000000
+    ],
+    "1.6b": [
+     983000000,
+     983000000
+    ],
+    "12b": [
+     7000000000,
+     7000000000
+    ]
+   }
+  },
+  {
+   "name": "nous-hermes2",
+   "capabilities": [],
+   "sizes": [
+    "10.7b",
+    "34b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 33,
+   "updated_at": "2024-01-02T14:26:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     6100000000,
+     6100000000
+    ],
+    "10.7b": [
+     6100000000,
+     6100000000
+    ],
+    "34b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "yi-coder",
+   "capabilities": [],
+   "sizes": [
+    "1.5b",
+    "9b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 67,
+   "updated_at": "2024-09-11T16:47:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5000000000,
+     5000000000
+    ],
+    "1.5b": [
+     866000000,
+     866000000
+    ],
+    "9b": [
+     5000000000,
+     5000000000
+    ]
+   }
+  },
+  {
+   "name": "aya",
+   "capabilities": [],
+   "sizes": [
+    "8b",
+    "35b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 33,
+   "updated_at": "2024-05-23T20:29:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4800000000,
+     4800000000
+    ],
+    "8b": [
+     4800000000,
+     4800000000
+    ],
+    "35b": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "stable-code",
+   "capabilities": [],
+   "sizes": [
+    "3b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 36,
+   "updated_at": "2024-03-26T02:45:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1600000000,
+     1600000000
+    ],
+    "3b": [
+     1600000000,
+     1600000000
+    ]
+   }
+  },
+  {
+   "name": "nomic-embed-text-v2-moe",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": null,
+   "updated_at": "2025-12-10T22:09:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     958000000,
+     958000000
+    ]
+   }
+  },
+  {
+   "name": "wizard-math",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b",
+    "70b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 64,
+   "updated_at": "2023-12-19T16:02:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "llama-guard3",
+   "capabilities": [],
+   "sizes": [
+    "1b",
+    "8b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 33,
+   "updated_at": "2024-10-11T03:32:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "1b": [
+     1600000000,
+     1600000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ]
+   }
+  },
+  {
+   "name": "devstral",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "24b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 5,
+   "updated_at": "2025-07-04T18:29:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     14000000000,
+     14000000000
+    ],
+    "24b": [
+     14000000000,
+     14000000000
+    ]
+   }
+  },
+  {
+   "name": "internlm2",
+   "capabilities": [],
+   "sizes": [
+    "1m",
+    "1.8b",
+    "7b",
+    "20b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 65,
+   "updated_at": "2024-08-16T21:19:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4500000000,
+     4500000000
+    ],
+    "1m": [
+     4500000000,
+     4500000000
+    ],
+    "1.8b": [
+     1100000000,
+     1100000000
+    ],
+    "7b": [
+     4500000000,
+     4500000000
+    ],
+    "20b": [
+     11000000000,
+     11000000000
+    ]
+   }
+  },
+  {
+   "name": "granite3.1-dense",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "2b",
+    "8b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 33,
+   "updated_at": "2025-01-17T22:46:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5000000000,
+     5000000000
+    ],
+    "2b": [
+     1600000000,
+     1600000000
+    ],
+    "8b": [
+     5000000000,
+     5000000000
+    ]
+   }
+  },
+  {
+   "name": "llama3-chatqa",
+   "capabilities": [],
+   "sizes": [
+    "8b",
+    "70b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 35,
+   "updated_at": "2024-05-10T23:53:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "phi3.5",
+   "capabilities": [],
+   "sizes": [
+    "3.8b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 17,
+   "updated_at": "2024-09-05T19:00:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2200000000,
+     2200000000
+    ],
+    "3.8b": [
+     2200000000,
+     2200000000
+    ]
+   }
+  },
+  {
+   "name": "aya-expanse",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "8b",
+    "32b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 33,
+   "updated_at": "2024-10-25T02:01:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5100000000,
+     5100000000
+    ],
+    "8b": [
+     5100000000,
+     5100000000
+    ],
+    "32b": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "granite3-dense",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "2b",
+    "8b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 33,
+   "updated_at": "2024-11-19T22:35:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     1600000000,
+     1600000000
+    ],
+    "2b": [
+     1600000000,
+     1600000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ]
+   }
+  },
+  {
+   "name": "xwinlm",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b"
+   ],
+   "pulls": 1100000,
+   "pulls_text": "1.1M",
+   "tags": 80,
+   "updated_at": "2023-11-04T06:11:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "samantha-mistral",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 49,
+   "updated_at": "2023-10-15T16:10:00+00:00",
+   "updated_text": "3 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "dolphincoder",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "15b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 35,
+   "updated_at": "2024-04-09T00:01:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4200000000,
+     4200000000
+    ],
+    "7b": [
+     4200000000,
+     4200000000
+    ],
+    "15b": [
+     9100000000,
+     9100000000
+    ]
+   }
+  },
+  {
+   "name": "llama3-gradient",
+   "capabilities": [],
+   "sizes": [
+    "8b",
+    "70b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 35,
+   "updated_at": "2024-05-05T01:05:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "llama3-groq-tool-use",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "8b",
+    "70b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 33,
+   "updated_at": "2024-07-25T01:15:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "yarn-llama2",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 67,
+   "updated_at": "2023-11-04T22:50:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "granite3.2-vision",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [
+    "2b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 5,
+   "updated_at": "2025-02-27T19:26:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     2400000000,
+     2400000000
+    ],
+    "2b": [
+     2400000000,
+     2400000000
+    ]
+   }
+  },
+  {
+   "name": "starling-lm",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 36,
+   "updated_at": "2024-04-02T23:45:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "phind-codellama",
+   "capabilities": [],
+   "sizes": [
+    "34b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 49,
+   "updated_at": "2023-12-28T02:53:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ],
+    "34b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-openorca",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 1000000,
+   "pulls_text": "1M",
+   "tags": 17,
+   "updated_at": "2023-10-11T22:00:00+00:00",
+   "updated_text": "3 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "solar",
+   "capabilities": [],
+   "sizes": [
+    "10.7b"
+   ],
+   "pulls": 991200,
+   "pulls_text": "991.2K",
+   "tags": 32,
+   "updated_at": "2023-12-18T03:00:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     6100000000,
+     6100000000
+    ],
+    "10.7b": [
+     6100000000,
+     6100000000
+    ]
+   }
+  },
+  {
+   "name": "granite3-moe",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "1b",
+    "3b"
+   ],
+   "pulls": 980900,
+   "pulls_text": "980.9K",
+   "tags": 33,
+   "updated_at": "2024-11-19T22:33:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     822000000,
+     822000000
+    ],
+    "1b": [
+     822000000,
+     822000000
+    ],
+    "3b": [
+     2100000000,
+     2100000000
+    ]
+   }
+  },
+  {
+   "name": "stable-beluga",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b",
+    "70b"
+   ],
+   "pulls": 978100,
+   "pulls_text": "978.1K",
+   "tags": 49,
+   "updated_at": "2023-10-29T21:57:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "shieldgemma",
+   "capabilities": [],
+   "sizes": [
+    "2b",
+    "9b",
+    "27b"
+   ],
+   "pulls": 968800,
+   "pulls_text": "968.8K",
+   "tags": 49,
+   "updated_at": "2024-10-11T05:58:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5800000000,
+     5800000000
+    ],
+    "2b": [
+     1700000000,
+     1700000000
+    ],
+    "9b": [
+     5800000000,
+     5800000000
+    ],
+    "27b": [
+     17000000000,
+     17000000000
+    ]
+   }
+  },
+  {
+   "name": "deepcoder",
+   "capabilities": [],
+   "sizes": [
+    "1.5b",
+    "14b"
+   ],
+   "pulls": 964200,
+   "pulls_text": "964.2K",
+   "tags": 9,
+   "updated_at": "2025-04-08T22:53:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     9000000000,
+     9000000000
+    ],
+    "1.5b": [
+     1100000000,
+     1100000000
+    ],
+    "14b": [
+     9000000000,
+     9000000000
+    ]
+   }
+  },
+  {
+   "name": "orca2",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "13b"
+   ],
+   "pulls": 963800,
+   "pulls_text": "963.8K",
+   "tags": 33,
+   "updated_at": "2023-11-22T22:13:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "wizardlm",
+   "capabilities": [],
+   "sizes": [],
+   "pulls": 956300,
+   "pulls_text": "956.3K",
+   "tags": 73,
+   "updated_at": "2023-10-30T02:54:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "reader-lm",
+   "capabilities": [],
+   "sizes": [
+    "0.5b",
+    "1.5b"
+   ],
+   "pulls": 954700,
+   "pulls_text": "954.7K",
+   "tags": 33,
+   "updated_at": "2024-09-11T19:13:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     935000000,
+     935000000
+    ],
+    "0.5b": [
+     352000000,
+     352000000
+    ],
+    "1.5b": [
+     935000000,
+     935000000
+    ]
+   }
+  },
+  {
+   "name": "paraphrase-multilingual",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "278m"
+   ],
+   "pulls": 949500,
+   "pulls_text": "949.5K",
+   "tags": 3,
+   "updated_at": "2024-08-07T00:05:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     563000000,
+     563000000
+    ],
+    "278m": [
+     563000000,
+     563000000
+    ]
+   }
+  },
+  {
+   "name": "llama-pro",
+   "capabilities": [],
+   "sizes": [],
+   "pulls": 937000,
+   "pulls_text": "937K",
+   "tags": 33,
+   "updated_at": "2024-01-09T03:30:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ]
+   }
+  },
+  {
+   "name": "yarn-mistral",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 927000,
+   "pulls_text": "927K",
+   "tags": 33,
+   "updated_at": "2023-11-04T04:20:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "nexusraven",
+   "capabilities": [],
+   "sizes": [
+    "13b"
+   ],
+   "pulls": 920500,
+   "pulls_text": "920.5K",
+   "tags": 32,
+   "updated_at": "2024-01-17T19:53:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     7400000000,
+     7400000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron-3-nano",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [
+    "4b",
+    "30b"
+   ],
+   "pulls": 916200,
+   "pulls_text": "916.2K",
+   "tags": 9,
+   "updated_at": "2026-03-16T15:34:00+00:00",
+   "updated_text": "7 months ago",
+   "size_bytes": {
+    "latest": [
+     24000000000,
+     24000000000
+    ],
+    "4b": [
+     2800000000,
+     2800000000
+    ],
+    "30b": [
+     24000000000,
+     24000000000
+    ]
+   }
+  },
+  {
+   "name": "meditron",
+   "capabilities": [],
+   "sizes": [
+    "7b",
+    "70b"
+   ],
+   "pulls": 915400,
+   "pulls_text": "915.4K",
+   "tags": 22,
+   "updated_at": "2023-12-05T18:31:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ],
+    "70b": [
+     39000000000,
+     39000000000
+    ]
+   }
+  },
+  {
+   "name": "bakllava",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 903600,
+   "pulls_text": "903.6K",
+   "tags": 17,
+   "updated_at": "2023-12-13T19:04:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ]
+   }
+  },
+  {
+   "name": "command-r-plus",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "104b"
+   ],
+   "pulls": 820900,
+   "pulls_text": "820.9K",
+   "tags": 21,
+   "updated_at": "2024-08-31T07:16:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     59000000000,
+     59000000000
+    ],
+    "104b": [
+     59000000000,
+     59000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-small3.1",
+   "capabilities": [
+    "vision",
+    "tools"
+   ],
+   "sizes": [
+    "24b"
+   ],
+   "pulls": 800100,
+   "pulls_text": "800.1K",
+   "tags": 5,
+   "updated_at": "2025-04-07T16:59:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     15000000000,
+     15000000000
+    ],
+    "24b": [
+     15000000000,
+     15000000000
+    ]
+   }
+  },
+  {
+   "name": "exaone-deep",
+   "capabilities": [],
+   "sizes": [
+    "2.4b",
+    "7.8b",
+    "32b"
+   ],
+   "pulls": 780500,
+   "pulls_text": "780.5K",
+   "tags": 13,
+   "updated_at": "2025-03-19T17:04:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4800000000,
+     4800000000
+    ],
+    "2.4b": [
+     1600000000,
+     1600000000
+    ],
+    "7.8b": [
+     4800000000,
+     4800000000
+    ],
+    "32b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "medllama2",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 742900,
+   "pulls_text": "742.9K",
+   "tags": 17,
+   "updated_at": "2023-10-29T06:00:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ]
+   }
+  },
+  {
+   "name": "tinydolphin",
+   "capabilities": [],
+   "sizes": [
+    "1.1b"
+   ],
+   "pulls": 742800,
+   "pulls_text": "742.8K",
+   "tags": 18,
+   "updated_at": "2024-01-30T09:39:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     637000000,
+     637000000
+    ],
+    "1.1b": [
+     637000000,
+     637000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-v3.1",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "671b"
+   ],
+   "pulls": 736600,
+   "pulls_text": "736.6K",
+   "tags": 7,
+   "updated_at": "2025-09-27T00:46:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     404000000000,
+     404000000000
+    ],
+    "671b": [
+     404000000000,
+     404000000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron-mini",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "4b"
+   ],
+   "pulls": 729600,
+   "pulls_text": "729.6K",
+   "tags": 17,
+   "updated_at": "2024-09-18T20:21:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2700000000,
+     2700000000
+    ],
+    "4b": [
+     2700000000,
+     2700000000
+    ]
+   }
+  },
+  {
+   "name": "codegeex4",
+   "capabilities": [],
+   "sizes": [
+    "9b"
+   ],
+   "pulls": 706000,
+   "pulls_text": "706K",
+   "tags": 17,
+   "updated_at": "2024-07-09T01:33:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     5500000000,
+     5500000000
+    ],
+    "9b": [
+     5500000000,
+     5500000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron3",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "33b"
+   ],
+   "pulls": 681100,
+   "pulls_text": "681.1K",
+   "tags": 4,
+   "updated_at": "2026-04-27T20:26:00+00:00",
+   "updated_text": "5 months ago",
+   "size_bytes": {
+    "33b": [
+     28000000000,
+     28000000000
+    ]
+   }
+  },
+  {
+   "name": "llava-phi3",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "3.8b"
+   ],
+   "pulls": 676100,
+   "pulls_text": "676.1K",
+   "tags": 4,
+   "updated_at": "2024-05-07T21:20:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2900000000,
+     2900000000
+    ],
+    "3.8b": [
+     2900000000,
+     2900000000
+    ]
+   }
+  },
+  {
+   "name": "opencoder",
+   "capabilities": [],
+   "sizes": [
+    "1.5b",
+    "8b"
+   ],
+   "pulls": 668200,
+   "pulls_text": "668.2K",
+   "tags": 9,
+   "updated_at": "2024-11-18T07:31:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "1.5b": [
+     1400000000,
+     1400000000
+    ],
+    "8b": [
+     4700000000,
+     4700000000
+    ]
+   }
+  },
+  {
+   "name": "wizardlm-uncensored",
+   "capabilities": [],
+   "sizes": [
+    "13b"
+   ],
+   "pulls": 661600,
+   "pulls_text": "661.6K",
+   "tags": 18,
+   "updated_at": "2023-10-28T15:29:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     7400000000,
+     7400000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "70b"
+   ],
+   "pulls": 639900,
+   "pulls_text": "639.9K",
+   "tags": 17,
+   "updated_at": "2024-10-16T23:10:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     43000000000,
+     43000000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ]
+   }
+  },
+  {
+   "name": "ornith",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "9b",
+    "35b"
+   ],
+   "pulls": 632800,
+   "pulls_text": "632.8K",
+   "tags": 9,
+   "updated_at": "2026-06-27T20:45:00+00:00",
+   "updated_text": "3 months ago",
+   "size_bytes": {
+    "latest": [
+     5600000000,
+     5600000000
+    ],
+    "9b": [
+     5600000000,
+     5600000000
+    ],
+    "35b": [
+     21000000000,
+     21000000000
+    ]
+   }
+  },
+  {
+   "name": "reflection",
+   "capabilities": [],
+   "sizes": [
+    "70b"
+   ],
+   "pulls": 630400,
+   "pulls_text": "630.4K",
+   "tags": 17,
+   "updated_at": "2024-09-09T05:16:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     40000000000,
+     40000000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "codeup",
+   "capabilities": [],
+   "sizes": [
+    "13b"
+   ],
+   "pulls": 610500,
+   "pulls_text": "610.5K",
+   "tags": 19,
+   "updated_at": "2023-10-29T06:38:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     7400000000,
+     7400000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "nous-hermes2-mixtral",
+   "capabilities": [],
+   "sizes": [
+    "8x7b"
+   ],
+   "pulls": 605400,
+   "pulls_text": "605.4K",
+   "tags": 18,
+   "updated_at": "2024-12-20T01:05:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     26000000000,
+     26000000000
+    ],
+    "8x7b": [
+     26000000000,
+     26000000000
+    ]
+   }
+  },
+  {
+   "name": "athene-v2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "72b"
+   ],
+   "pulls": 604800,
+   "pulls_text": "604.8K",
+   "tags": 17,
+   "updated_at": "2024-11-15T23:37:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     47000000000,
+     47000000000
+    ],
+    "72b": [
+     47000000000,
+     47000000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3-next",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "80b"
+   ],
+   "pulls": 601900,
+   "pulls_text": "601.9K",
+   "tags": 9,
+   "updated_at": "2025-12-05T04:37:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     50000000000,
+     50000000000
+    ],
+    "80b": [
+     50000000000,
+     50000000000
+    ]
+   }
+  },
+  {
+   "name": "megadolphin",
+   "capabilities": [],
+   "sizes": [
+    "120b"
+   ],
+   "pulls": 583600,
+   "pulls_text": "583.6K",
+   "tags": 19,
+   "updated_at": "2024-01-11T01:25:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     68000000000,
+     68000000000
+    ],
+    "120b": [
+     68000000000,
+     68000000000
+    ]
+   }
+  },
+  {
+   "name": "everythinglm",
+   "capabilities": [],
+   "sizes": [
+    "13b"
+   ],
+   "pulls": 581800,
+   "pulls_text": "581.8K",
+   "tags": 18,
+   "updated_at": "2023-12-27T20:51:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     7400000000,
+     7400000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "exaone3.5",
+   "capabilities": [],
+   "sizes": [
+    "2.4b",
+    "7.8b",
+    "32b"
+   ],
+   "pulls": 578800,
+   "pulls_text": "578.8K",
+   "tags": 13,
+   "updated_at": "2024-12-10T08:03:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4800000000,
+     4800000000
+    ],
+    "2.4b": [
+     1600000000,
+     1600000000
+    ],
+    "7.8b": [
+     4800000000,
+     4800000000
+    ],
+    "32b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "solar-pro",
+   "capabilities": [],
+   "sizes": [
+    "22b"
+   ],
+   "pulls": 573900,
+   "pulls_text": "573.9K",
+   "tags": 18,
+   "updated_at": "2024-09-18T22:27:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     13000000000,
+     13000000000
+    ],
+    "22b": [
+     13000000000,
+     13000000000
+    ]
+   }
+  },
+  {
+   "name": "magicoder",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 570600,
+   "pulls_text": "570.6K",
+   "tags": 18,
+   "updated_at": "2023-12-05T23:59:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ]
+   }
+  },
+  {
+   "name": "nuextract",
+   "capabilities": [],
+   "sizes": [
+    "3.8b"
+   ],
+   "pulls": 569300,
+   "pulls_text": "569.3K",
+   "tags": 17,
+   "updated_at": "2024-07-22T23:54:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     2200000000,
+     2200000000
+    ],
+    "3.8b": [
+     2200000000,
+     2200000000
+    ]
+   }
+  },
+  {
+   "name": "mathstral",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 564700,
+   "pulls_text": "564.7K",
+   "tags": 17,
+   "updated_at": "2024-07-16T17:04:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-ocr",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "3b"
+   ],
+   "pulls": 554700,
+   "pulls_text": "554.7K",
+   "tags": 3,
+   "updated_at": "2025-11-19T20:26:00+00:00",
+   "updated_text": "11 months ago",
+   "size_bytes": {
+    "latest": [
+     6700000000,
+     6700000000
+    ],
+    "3b": [
+     6700000000,
+     6700000000
+    ]
+   }
+  },
+  {
+   "name": "falcon2",
+   "capabilities": [],
+   "sizes": [
+    "11b"
+   ],
+   "pulls": 554600,
+   "pulls_text": "554.6K",
+   "tags": 17,
+   "updated_at": "2024-05-14T01:46:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     6400000000,
+     6400000000
+    ],
+    "11b": [
+     6400000000,
+     6400000000
+    ]
+   }
+  },
+  {
+   "name": "notus",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 554500,
+   "pulls_text": "554.5K",
+   "tags": 18,
+   "updated_at": "2023-12-29T22:06:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "notux",
+   "capabilities": [],
+   "sizes": [
+    "8x7b"
+   ],
+   "pulls": 553100,
+   "pulls_text": "553.1K",
+   "tags": 18,
+   "updated_at": "2023-12-29T03:35:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     26000000000,
+     26000000000
+    ],
+    "8x7b": [
+     26000000000,
+     26000000000
+    ]
+   }
+  },
+  {
+   "name": "granite4.1",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "3b",
+    "8b",
+    "30b"
+   ],
+   "pulls": 550300,
+   "pulls_text": "550.3K",
+   "tags": 48,
+   "updated_at": "2026-05-19T21:58:00+00:00",
+   "updated_text": "5 months ago",
+   "size_bytes": {
+    "3b": [
+     2100000000,
+     2100000000
+    ],
+    "8b": [
+     5300000000,
+     5300000000
+    ],
+    "30b": [
+     17000000000,
+     17000000000
+    ]
+   }
+  },
+  {
+   "name": "stablelm-zephyr",
+   "capabilities": [],
+   "sizes": [
+    "3b"
+   ],
+   "pulls": 546900,
+   "pulls_text": "546.9K",
+   "tags": 17,
+   "updated_at": "2023-12-27T20:51:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     1600000000,
+     1600000000
+    ],
+    "3b": [
+     1600000000,
+     1600000000
+    ]
+   }
+  },
+  {
+   "name": "bespoke-minicheck",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 544500,
+   "pulls_text": "544.5K",
+   "tags": 17,
+   "updated_at": "2024-09-18T18:29:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ]
+   }
+  },
+  {
+   "name": "duckdb-nsql",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 541800,
+   "pulls_text": "541.8K",
+   "tags": 17,
+   "updated_at": "2024-01-29T23:52:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     3800000000,
+     3800000000
+    ],
+    "7b": [
+     3800000000,
+     3800000000
+    ]
+   }
+  },
+  {
+   "name": "firefunction-v2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "70b"
+   ],
+   "pulls": 538700,
+   "pulls_text": "538.7K",
+   "tags": 17,
+   "updated_at": "2024-07-18T16:39:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     40000000000,
+     40000000000
+    ],
+    "70b": [
+     40000000000,
+     40000000000
+    ]
+   }
+  },
+  {
+   "name": "mistrallite",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 537700,
+   "pulls_text": "537.7K",
+   "tags": 17,
+   "updated_at": "2023-11-02T22:27:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     4100000000,
+     4100000000
+    ],
+    "7b": [
+     4100000000,
+     4100000000
+    ]
+   }
+  },
+  {
+   "name": "wizard-vicuna",
+   "capabilities": [],
+   "sizes": [
+    "13b"
+   ],
+   "pulls": 531600,
+   "pulls_text": "531.6K",
+   "tags": 17,
+   "updated_at": "2023-10-28T19:41:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     7400000000,
+     7400000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "minimax-m3",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 524200,
+   "pulls_text": "524.2K",
+   "tags": null,
+   "updated_at": "2026-06-01T01:34:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "open-orca-platypus2",
+   "capabilities": [],
+   "sizes": [
+    "13b"
+   ],
+   "pulls": 523600,
+   "pulls_text": "523.6K",
+   "tags": 17,
+   "updated_at": "2023-10-29T07:52:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     7400000000,
+     7400000000
+    ],
+    "13b": [
+     7400000000,
+     7400000000
+    ]
+   }
+  },
+  {
+   "name": "rnj-1",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "8b"
+   ],
+   "pulls": 516600,
+   "pulls_text": "516.6K",
+   "tags": 5,
+   "updated_at": "2025-12-09T07:48:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     5100000000,
+     5100000000
+    ],
+    "8b": [
+     5100000000,
+     5100000000
+    ]
+   }
+  },
+  {
+   "name": "codebooga",
+   "capabilities": [],
+   "sizes": [
+    "34b"
+   ],
+   "pulls": 514000,
+   "pulls_text": "514K",
+   "tags": 16,
+   "updated_at": "2023-10-29T10:48:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ],
+    "34b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "goliath",
+   "capabilities": [],
+   "sizes": [],
+   "pulls": 493100,
+   "pulls_text": "493.1K",
+   "tags": 16,
+   "updated_at": "2023-11-17T21:54:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     66000000000,
+     66000000000
+    ]
+   }
+  },
+  {
+   "name": "kimi-k2.6",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 492100,
+   "pulls_text": "492.1K",
+   "tags": null,
+   "updated_at": "2026-04-20T20:09:00+00:00",
+   "updated_text": "5 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "olmo-3",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "7b",
+    "32b"
+   ],
+   "pulls": 471200,
+   "pulls_text": "471.2K",
+   "tags": 15,
+   "updated_at": "2025-12-16T05:55:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     4500000000,
+     4500000000
+    ],
+    "7b": [
+     4500000000,
+     4500000000
+    ],
+    "32b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "snowflake-arctic-embed2",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "568m"
+   ],
+   "pulls": 469300,
+   "pulls_text": "469.3K",
+   "tags": 3,
+   "updated_at": "2024-12-04T23:57:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     1200000000,
+     1200000000
+    ],
+    "568m": [
+     1200000000,
+     1200000000
+    ]
+   }
+  },
+  {
+   "name": "granite3.2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "2b",
+    "8b"
+   ],
+   "pulls": 466600,
+   "pulls_text": "466.6K",
+   "tags": 9,
+   "updated_at": "2025-02-26T05:48:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "2b": [
+     1500000000,
+     1500000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-v4-pro",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 458000,
+   "pulls_text": "458K",
+   "tags": 2,
+   "updated_at": "2026-08-13T15:00:00+00:00",
+   "updated_text": "2 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "medgemma",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "4b",
+    "27b"
+   ],
+   "pulls": 453300,
+   "pulls_text": "453.3K",
+   "tags": 9,
+   "updated_at": "2026-04-16T00:08:00+00:00",
+   "updated_text": "6 months ago",
+   "size_bytes": {
+    "latest": [
+     3300000000,
+     3300000000
+    ],
+    "4b": [
+     3300000000,
+     3300000000
+    ],
+    "27b": [
+     17000000000,
+     17000000000
+    ]
+   }
+  },
+  {
+   "name": "r1-1776",
+   "capabilities": [],
+   "sizes": [
+    "70b",
+    "671b"
+   ],
+   "pulls": 430800,
+   "pulls_text": "430.8K",
+   "tags": 9,
+   "updated_at": "2025-02-21T15:28:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     43000000000,
+     43000000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ],
+    "671b": [
+     404000000000,
+     404000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-medium-3.5",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "128b"
+   ],
+   "pulls": 429500,
+   "pulls_text": "429.5K",
+   "tags": 5,
+   "updated_at": "2026-05-05T23:14:00+00:00",
+   "updated_text": "5 months ago",
+   "size_bytes": {
+    "latest": [
+     80000000000,
+     80000000000
+    ],
+    "128b": [
+     80000000000,
+     80000000000
+    ]
+   }
+  },
+  {
+   "name": "sailor2",
+   "capabilities": [],
+   "sizes": [
+    "1b",
+    "8b",
+    "20b"
+   ],
+   "pulls": 426300,
+   "pulls_text": "426.3K",
+   "tags": 13,
+   "updated_at": "2024-12-04T08:10:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5200000000,
+     5200000000
+    ],
+    "1b": [
+     1100000000,
+     1100000000
+    ],
+    "8b": [
+     5200000000,
+     5200000000
+    ],
+    "20b": [
+     12000000000,
+     12000000000
+    ]
+   }
+  },
+  {
+   "name": "tulu3",
+   "capabilities": [],
+   "sizes": [
+    "8b",
+    "70b"
+   ],
+   "pulls": 411700,
+   "pulls_text": "411.7K",
+   "tags": 9,
+   "updated_at": "2024-12-21T03:58:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4900000000,
+     4900000000
+    ],
+    "8b": [
+     4900000000,
+     4900000000
+    ],
+    "70b": [
+     43000000000,
+     43000000000
+    ]
+   }
+  },
+  {
+   "name": "ornith-1.5",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "9b",
+    "35b",
+    "397b"
+   ],
+   "pulls": 396800,
+   "pulls_text": "396.8K",
+   "tags": 3,
+   "updated_at": "2026-08-19T18:06:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {
+    "9b": [
+     6600000000,
+     6600000000
+    ],
+    "35b": [
+     23000000000,
+     23000000000
+    ],
+    "397b": [
+     242000000000,
+     242000000000
+    ]
+   }
+  },
+  {
+   "name": "granite-embedding",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "30m",
+    "278m"
+   ],
+   "pulls": 390600,
+   "pulls_text": "390.6K",
+   "tags": 6,
+   "updated_at": "2024-12-18T04:11:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     63000000,
+     63000000
+    ],
+    "30m": [
+     63000000,
+     63000000
+    ],
+    "278m": [
+     563000000,
+     563000000
+    ]
+   }
+  },
+  {
+   "name": "glm-5.2",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 375900,
+   "pulls_text": "375.9K",
+   "tags": null,
+   "updated_at": "2026-06-16T17:39:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "dbrx",
+   "capabilities": [],
+   "sizes": [
+    "132b"
+   ],
+   "pulls": 373900,
+   "pulls_text": "373.9K",
+   "tags": 7,
+   "updated_at": "2024-04-16T04:18:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     74000000000,
+     74000000000
+    ],
+    "132b": [
+     74000000000,
+     74000000000
+    ]
+   }
+  },
+  {
+   "name": "devstral-2",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "123b"
+   ],
+   "pulls": 364000,
+   "pulls_text": "364K",
+   "tags": 5,
+   "updated_at": "2025-12-12T01:21:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     75000000000,
+     75000000000
+    ],
+    "123b": [
+     75000000000,
+     75000000000
+    ]
+   }
+  },
+  {
+   "name": "granite3-guardian",
+   "capabilities": [],
+   "sizes": [
+    "2b",
+    "8b"
+   ],
+   "pulls": 347100,
+   "pulls_text": "347.1K",
+   "tags": 10,
+   "updated_at": "2024-11-19T23:33:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     2700000000,
+     2700000000
+    ],
+    "2b": [
+     2700000000,
+     2700000000
+    ],
+    "8b": [
+     5800000000,
+     5800000000
+    ]
+   }
+  },
+  {
+   "name": "command-r7b",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 338200,
+   "pulls_text": "338.2K",
+   "tags": 5,
+   "updated_at": "2025-01-16T22:27:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5100000000,
+     5100000000
+    ],
+    "7b": [
+     5100000000,
+     5100000000
+    ]
+   }
+  },
+  {
+   "name": "phi4-mini-reasoning",
+   "capabilities": [],
+   "sizes": [
+    "3.8b"
+   ],
+   "pulls": 320100,
+   "pulls_text": "320.1K",
+   "tags": 5,
+   "updated_at": "2025-05-01T03:53:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     3200000000,
+     3200000000
+    ],
+    "3.8b": [
+     3200000000,
+     3200000000
+    ]
+   }
+  },
+  {
+   "name": "olmo-3.1",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "32b"
+   ],
+   "pulls": 309000,
+   "pulls_text": "309K",
+   "tags": 10,
+   "updated_at": "2025-12-16T05:56:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ],
+    "32b": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "muse-glimmer",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "30b"
+   ],
+   "pulls": 299800,
+   "pulls_text": "299.8K",
+   "tags": 15,
+   "updated_at": "2026-08-28T19:09:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {
+    "latest": [
+     18000000000,
+     18000000000
+    ],
+    "30b": [
+     18000000000,
+     18000000000
+    ]
+   }
+  },
+  {
+   "name": "alfred",
+   "capabilities": [],
+   "sizes": [
+    "40b"
+   ],
+   "pulls": 298400,
+   "pulls_text": "298.4K",
+   "tags": 7,
+   "updated_at": "2023-11-19T13:58:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     24000000000,
+     24000000000
+    ],
+    "40b": [
+     24000000000,
+     24000000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-v2.5",
+   "capabilities": [],
+   "sizes": [
+    "236b"
+   ],
+   "pulls": 297100,
+   "pulls_text": "297.1K",
+   "tags": 7,
+   "updated_at": "2024-09-11T19:31:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     133000000000,
+     133000000000
+    ],
+    "236b": [
+     133000000000,
+     133000000000
+    ]
+   }
+  },
+  {
+   "name": "bge-large",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [
+    "335m"
+   ],
+   "pulls": 292300,
+   "pulls_text": "292.3K",
+   "tags": 3,
+   "updated_at": "2024-08-07T00:04:00+00:00",
+   "updated_text": "2 years ago",
+   "size_bytes": {
+    "latest": [
+     671000000,
+     671000000
+    ],
+    "335m": [
+     671000000,
+     671000000
+    ]
+   }
+  },
+  {
+   "name": "smallthinker",
+   "capabilities": [],
+   "sizes": [
+    "3b"
+   ],
+   "pulls": 266000,
+   "pulls_text": "266K",
+   "tags": 5,
+   "updated_at": "2024-12-30T21:33:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     3600000000,
+     3600000000
+    ],
+    "3b": [
+     3600000000,
+     3600000000
+    ]
+   }
+  },
+  {
+   "name": "kimi-k2.7-code",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 251200,
+   "pulls_text": "251.2K",
+   "tags": null,
+   "updated_at": "2026-06-13T00:26:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "nemotron-3.5-lightning",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "30b"
+   ],
+   "pulls": 238400,
+   "pulls_text": "238.4K",
+   "tags": 11,
+   "updated_at": "2026-10-16T22:27:00+00:00",
+   "updated_text": "4 hours ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     25000000000
+    ],
+    "30b": [
+     19000000000,
+     25000000000
+    ]
+   }
+  },
+  {
+   "name": "command-a",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "111b"
+   ],
+   "pulls": 234900,
+   "pulls_text": "234.9K",
+   "tags": 5,
+   "updated_at": "2025-03-13T12:39:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     67000000000,
+     67000000000
+    ],
+    "111b": [
+     67000000000,
+     67000000000
+    ]
+   }
+  },
+  {
+   "name": "cogito-2.1",
+   "capabilities": [],
+   "sizes": [
+    "671b"
+   ],
+   "pulls": 227700,
+   "pulls_text": "227.7K",
+   "tags": 5,
+   "updated_at": "2025-11-19T18:22:00+00:00",
+   "updated_text": "11 months ago",
+   "size_bytes": {
+    "latest": [
+     1300000000000,
+     1300000000000
+    ],
+    "671b": [
+     1300000000000,
+     1300000000000
+    ]
+   }
+  },
+  {
+   "name": "marco-o1",
+   "capabilities": [],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 218700,
+   "pulls_text": "218.7K",
+   "tags": 5,
+   "updated_at": "2024-12-04T08:14:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     4700000000,
+     4700000000
+    ],
+    "7b": [
+     4700000000,
+     4700000000
+    ]
+   }
+  },
+  {
+   "name": "lfm2.5",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "8b",
+    "24b"
+   ],
+   "pulls": 218600,
+   "pulls_text": "218.6K",
+   "tags": 10,
+   "updated_at": "2026-10-15T06:20:00+00:00",
+   "updated_text": "yesterday",
+   "size_bytes": {
+    "latest": [
+     5200000000,
+     5200000000
+    ],
+    "8b": [
+     5200000000,
+     5200000000
+    ],
+    "24b": [
+     15000000000,
+     15000000000
+    ]
+   }
+  },
+  {
+   "name": "medgemma1.5",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "4b"
+   ],
+   "pulls": 213000,
+   "pulls_text": "213K",
+   "tags": 5,
+   "updated_at": "2026-04-16T00:04:00+00:00",
+   "updated_text": "6 months ago",
+   "size_bytes": {
+    "latest": [
+     3300000000,
+     3300000000
+    ],
+    "4b": [
+     3300000000,
+     3300000000
+    ]
+   }
+  },
+  {
+   "name": "command-r7b-arabic",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "7b"
+   ],
+   "pulls": 209900,
+   "pulls_text": "209.9K",
+   "tags": 5,
+   "updated_at": "2025-02-28T21:28:00+00:00",
+   "updated_text": "1 year ago",
+   "size_bytes": {
+    "latest": [
+     5100000000,
+     5100000000
+    ],
+    "7b": [
+     5100000000,
+     5100000000
+    ]
+   }
+  },
+  {
+   "name": "functiongemma",
+   "capabilities": [
+    "tools"
+   ],
+   "sizes": [
+    "270m"
+   ],
+   "pulls": 201500,
+   "pulls_text": "201.5K",
+   "tags": 4,
+   "updated_at": "2025-12-18T07:03:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {
+    "latest": [
+     301000000,
+     301000000
+    ],
+    "270m": [
+     301000000,
+     301000000
+    ]
+   }
+  },
+  {
+   "name": "qwen3.8-flash-next",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 190500,
+   "pulls_text": "190.5K",
+   "tags": 6,
+   "updated_at": "2026-09-05T17:55:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "glm-5.3-flash",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 186700,
+   "pulls_text": "186.7K",
+   "tags": null,
+   "updated_at": "2026-08-26T14:00:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "laguna-s-2.1",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 175200,
+   "pulls_text": "175.2K",
+   "tags": 8,
+   "updated_at": "2026-08-28T18:53:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {
+    "latest": [
+     96000000000,
+     96000000000
+    ]
+   }
+  },
+  {
+   "name": "gpt-oss-safeguard",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "20b",
+    "120b"
+   ],
+   "pulls": 164900,
+   "pulls_text": "164.9K",
+   "tags": 3,
+   "updated_at": "2025-10-29T02:04:00+00:00",
+   "updated_text": "11 months ago",
+   "size_bytes": {
+    "latest": [
+     14000000000,
+     14000000000
+    ],
+    "20b": [
+     14000000000,
+     14000000000
+    ],
+    "120b": [
+     65000000000,
+     65000000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron-cascade-2",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "30b"
+   ],
+   "pulls": 154700,
+   "pulls_text": "154.7K",
+   "tags": 3,
+   "updated_at": "2026-03-20T20:10:00+00:00",
+   "updated_text": "7 months ago",
+   "size_bytes": {
+    "latest": [
+     24000000000,
+     24000000000
+    ],
+    "30b": [
+     24000000000,
+     24000000000
+    ]
+   }
+  },
+  {
+   "name": "granite4.2",
+   "capabilities": [],
+   "sizes": [
+    "3b",
+    "8b",
+    "30b"
+   ],
+   "pulls": 151700,
+   "pulls_text": "151.7K",
+   "tags": 49,
+   "updated_at": "2026-08-27T21:41:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {
+    "latest": [
+     5300000000,
+     5300000000
+    ],
+    "3b": [
+     2200000000,
+     2200000000
+    ],
+    "8b": [
+     5300000000,
+     5300000000
+    ],
+    "30b": [
+     18000000000,
+     18000000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-large-3",
+   "capabilities": [
+    "vision",
+    "tools",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 137700,
+   "pulls_text": "137.7K",
+   "tags": null,
+   "updated_at": "2025-12-02T23:19:00+00:00",
+   "updated_text": "10 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "laguna-xs-2.1",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 133900,
+   "pulls_text": "133.9K",
+   "tags": 7,
+   "updated_at": "2026-08-31T20:58:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {
+    "latest": [
+     20000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "deepseek-v4.1-flash",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 132800,
+   "pulls_text": "132.8K",
+   "tags": null,
+   "updated_at": "2026-09-10T03:00:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "nemotron-3-ultra",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 127400,
+   "pulls_text": "127.4K",
+   "tags": null,
+   "updated_at": "2026-06-04T00:00:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "kimi-k3",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 104800,
+   "pulls_text": "104.8K",
+   "tags": null,
+   "updated_at": "2026-07-27T15:53:00+00:00",
+   "updated_text": "2 months ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "glm-5.3",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 98600,
+   "pulls_text": "98.6K",
+   "tags": null,
+   "updated_at": "2026-08-28T15:00:00+00:00",
+   "updated_text": "1 month ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "tev1",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "0.8b",
+    "4b"
+   ],
+   "pulls": 97500,
+   "pulls_text": "97.5K",
+   "tags": 13,
+   "updated_at": "2026-10-14T02:24:00+00:00",
+   "updated_text": "3 days ago",
+   "size_bytes": {
+    "latest": [
+     4400000000,
+     4600000000
+    ],
+    "0.8b": [
+     834000000,
+     1500000000
+    ],
+    "4b": [
+     4400000000,
+     4600000000
+    ]
+   }
+  },
+  {
+   "name": "north-mini-code-1.0",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 72900,
+   "pulls_text": "72.9K",
+   "tags": 7,
+   "updated_at": "2026-06-18T01:39:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {
+    "latest": [
+     19000000000,
+     19000000000
+    ]
+   }
+  },
+  {
+   "name": "minicpm-v4.6",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "1b"
+   ],
+   "pulls": 71200,
+   "pulls_text": "71.2K",
+   "tags": 13,
+   "updated_at": "2026-06-02T07:54:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {
+    "latest": [
+     1600000000,
+     1600000000
+    ],
+    "1b": [
+     1600000000,
+     1600000000
+    ]
+   }
+  },
+  {
+   "name": "minicpm-v4.5",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "8b"
+   ],
+   "pulls": 55900,
+   "pulls_text": "55.9K",
+   "tags": 13,
+   "updated_at": "2026-06-02T08:02:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {
+    "latest": [
+     6100000000,
+     6100000000
+    ],
+    "8b": [
+     6100000000,
+     6100000000
+    ]
+   }
+  },
+  {
+   "name": "embeddinggemma-2",
+   "capabilities": [
+    "vision",
+    "embedding"
+   ],
+   "sizes": [
+    "270m",
+    "440m",
+    "570m",
+    "740m"
+   ],
+   "pulls": 52800,
+   "pulls_text": "52.8K",
+   "tags": 21,
+   "updated_at": "2026-10-15T05:40:00+00:00",
+   "updated_text": "yesterday",
+   "size_bytes": {
+    "latest": [
+     1300000000,
+     1300000000
+    ],
+    "270m": [
+     304000000,
+     378000000
+    ],
+    "440m": [
+     671000000,
+     714000000
+    ],
+    "570m": [
+     918000000,
+     990000000
+    ],
+    "740m": [
+     1300000000,
+     1300000000
+    ]
+   }
+  },
+  {
+   "name": "nimble",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "9b"
+   ],
+   "pulls": 47400,
+   "pulls_text": "47.4K",
+   "tags": 8,
+   "updated_at": "2026-10-14T02:23:00+00:00",
+   "updated_text": "3 days ago",
+   "size_bytes": {
+    "latest": [
+     9300000000,
+     9500000000
+    ],
+    "9b": [
+     9300000000,
+     9500000000
+    ]
+   }
+  },
+  {
+   "name": "granite4.1-guardian",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "8b"
+   ],
+   "pulls": 38000,
+   "pulls_text": "38K",
+   "tags": 16,
+   "updated_at": "2026-06-10T21:07:00+00:00",
+   "updated_text": "4 months ago",
+   "size_bytes": {
+    "8b": [
+     6900000000,
+     6900000000
+    ]
+   }
+  },
+  {
+   "name": "laguna-xs.2",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 36600,
+   "pulls_text": "36.6K",
+   "tags": 7,
+   "updated_at": "2026-07-25T18:19:00+00:00",
+   "updated_text": "2 months ago",
+   "size_bytes": {
+    "latest": [
+     23000000000,
+     23000000000
+    ]
+   }
+  },
+  {
+   "name": "clef-flash",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "9b"
+   ],
+   "pulls": 26000,
+   "pulls_text": "26K",
+   "tags": 5,
+   "updated_at": "2026-10-14T02:23:00+00:00",
+   "updated_text": "3 days ago",
+   "size_bytes": {
+    "latest": [
+     11000000000,
+     12000000000
+    ],
+    "9b": [
+     11000000000,
+     12000000000
+    ]
+   }
+  },
+  {
+   "name": "clef",
+   "capabilities": [
+    "vision",
+    "cloud"
+   ],
+   "sizes": [
+    "27b"
+   ],
+   "pulls": 18600,
+   "pulls_text": "18.6K",
+   "tags": 9,
+   "updated_at": "2026-10-14T02:23:00+00:00",
+   "updated_text": "3 days ago",
+   "size_bytes": {
+    "latest": [
+     18000000000,
+     20000000000
+    ],
+    "27b": [
+     18000000000,
+     20000000000
+    ]
+   }
+  },
+  {
+   "name": "d1",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "3b"
+   ],
+   "pulls": 12900,
+   "pulls_text": "12.9K",
+   "tags": 3,
+   "updated_at": "2026-10-15T04:56:00+00:00",
+   "updated_text": "yesterday",
+   "size_bytes": {
+    "latest": [
+     3700000000,
+     3700000000
+    ],
+    "3b": [
+     3700000000,
+     3700000000
+    ]
+   }
+  },
+  {
+   "name": "nimble-v3",
+   "capabilities": [
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "9b"
+   ],
+   "pulls": 11600,
+   "pulls_text": "11.6K",
+   "tags": 8,
+   "updated_at": "2026-10-13T00:39:00+00:00",
+   "updated_text": "4 days ago",
+   "size_bytes": {
+    "latest": [
+     9300000000,
+     9500000000
+    ],
+    "9b": [
+     9300000000,
+     9500000000
+    ]
+   }
+  },
+  {
+   "name": "laya",
+   "capabilities": [
+    "embedding"
+   ],
+   "sizes": [],
+   "pulls": 8649,
+   "pulls_text": "8,649",
+   "tags": 7,
+   "updated_at": "2026-10-16T16:16:00+00:00",
+   "updated_text": "10 hours ago",
+   "size_bytes": {
+    "latest": [
+     844000000,
+     846000000
+    ]
+   }
+  },
+  {
+   "name": "mistral-large-4",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 8439,
+   "pulls_text": "8,439",
+   "tags": null,
+   "updated_at": "2026-10-06T13:00:00+00:00",
+   "updated_text": "1 week ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "beam",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 4155,
+   "pulls_text": "4,155",
+   "tags": null,
+   "updated_at": "2026-10-16T13:00:00+00:00",
+   "updated_text": "14 hours ago",
+   "size_bytes": {}
+  },
+  {
+   "name": "kev",
+   "capabilities": [],
+   "sizes": [],
+   "pulls": 3374,
+   "pulls_text": "3,374",
+   "tags": 8,
+   "updated_at": "2026-10-13T00:54:00+00:00",
+   "updated_text": "4 days ago",
+   "size_bytes": {
+    "latest": [
+     6700000000,
+     6700000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron-3.5-super",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "120b"
+   ],
+   "pulls": 2517,
+   "pulls_text": "2,517",
+   "tags": 9,
+   "updated_at": "2026-10-15T17:36:00+00:00",
+   "updated_text": "yesterday",
+   "size_bytes": {
+    "latest": [
+     80000000000,
+     90000000000
+    ],
+    "120b": [
+     80000000000,
+     90000000000
+    ]
+   }
+  },
+  {
+   "name": "pplx-decider",
+   "capabilities": [
+    "vision"
+   ],
+   "sizes": [
+    "27b"
+   ],
+   "pulls": 2363,
+   "pulls_text": "2,363",
+   "tags": 6,
+   "updated_at": "2026-10-16T23:19:00+00:00",
+   "updated_text": "3 hours ago",
+   "size_bytes": {
+    "latest": [
+     17000000000,
+     17000000000
+    ],
+    "27b": [
+     17000000000,
+     17000000000
+    ]
+   }
+  },
+  {
+   "name": "strands-decider",
+   "capabilities": [],
+   "sizes": [
+    "2b"
+   ],
+   "pulls": 2349,
+   "pulls_text": "2,349",
+   "tags": 5,
+   "updated_at": "2026-10-13T02:56:00+00:00",
+   "updated_text": "4 days ago",
+   "size_bytes": {
+    "latest": [
+     2000000000,
+     2000000000
+    ],
+    "2b": [
+     2000000000,
+     2000000000
+    ]
+   }
+  },
+  {
+   "name": "nemotron-3.5-bolt",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [],
+   "pulls": 2306,
+   "pulls_text": "2,306",
+   "tags": 3,
+   "updated_at": "2026-10-15T16:40:00+00:00",
+   "updated_text": "yesterday",
+   "size_bytes": {
+    "latest": [
+     25000000000,
+     25000000000
+    ]
+   }
+  },
+  {
+   "name": "muse-spark-open",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking",
+    "cloud"
+   ],
+   "sizes": [],
+   "pulls": 1472,
+   "pulls_text": "1,472",
+   "tags": null,
+   "updated_at": "2026-10-15T09:00:00+00:00",
+   "updated_text": "yesterday",
+   "size_bytes": {}
+  },
+  {
+   "name": "bonsai-2",
+   "capabilities": [
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "sizes": [
+    "2b",
+    "4b",
+    "9b",
+    "27b"
+   ],
+   "pulls": 1223,
+   "pulls_text": "1,223",
+   "tags": 9,
+   "updated_at": "2026-10-16T14:53:00+00:00",
+   "updated_text": "12 hours ago",
+   "size_bytes": {
+    "latest": [
+     3200000000,
+     3200000000
+    ],
+    "2b": [
+     911000000,
+     911000000
+    ],
+    "4b": [
+     1600000000,
+     1600000000
+    ],
+    "9b": [
+     3200000000,
+     3200000000
+    ],
+    "27b": [
+     8300000000,
+     8300000000
+    ]
+   }
+  }
+ ]
+}

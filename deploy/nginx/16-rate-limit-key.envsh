@@ -1,0 +1,17 @@
+#!/bin/sh
+# Sourced by the nginx image's entrypoint before the templates are rendered: RATE_LIMIT_KEY is what
+# the attempt limits key on. With CLIENT_IP_HEADER (the header in which the proxy or tunnel in
+# front puts the visitor's address, always overwriting what the visitor sent) it is that header,
+# since the socket address is then the proxy, shared by everyone; without it, the socket address.
+if [ -n "${CLIENT_IP_HEADER:-}" ]; then
+  case "$CLIENT_IP_HEADER" in
+    *[!A-Za-z0-9-]*)
+      echo "CLIENT_IP_HEADER must be a header name, e.g. X-Real-IP" >&2
+      exit 1
+      ;;
+  esac
+  RATE_LIMIT_KEY="\$http_$(printf '%s' "$CLIENT_IP_HEADER" | tr 'A-Z-' 'a-z_')"
+else
+  RATE_LIMIT_KEY='$binary_remote_addr'
+fi
+export RATE_LIMIT_KEY
