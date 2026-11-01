@@ -112,7 +112,7 @@ export function ForgotPasswordScreen() {
           {t("auth.resetUnavailable")}
         </p>
       ) : step === "email" ? (
-        <form onSubmit={(e) => void sendCode(e)} className="space-y-4" data-testid="forgot-email-form">
+        <form onSubmit={(e) => void sendCode(e)} noValidate className="space-y-4" data-testid="forgot-email-form">
           <div className="space-y-1.5">
             <Label htmlFor="email">{t("auth.email")}</Label>
             <Input id="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} data-testid="email" />
@@ -125,7 +125,7 @@ export function ForgotPasswordScreen() {
           </Button>
         </form>
       ) : (
-        <form onSubmit={(e) => void submit(e)} className="space-y-4" data-testid="forgot-code-form">
+        <form onSubmit={(e) => void submit(e)} noValidate className="space-y-4" data-testid="forgot-code-form">
           <div className="space-y-1.5">
             <Label htmlFor="code">{t("auth.codeLabel")}</Label>
             <Input
