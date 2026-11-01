@@ -15,16 +15,20 @@ set -eu
 
 REPO="ThiagoBzMd/tunnelio"
 VERSION="${TUNNELIO_VERSION:-latest}"
-case "$VERSION" in
-  latest) BASE="https://github.com/$REPO/releases/latest/download" ;;
-  *)      BASE="https://github.com/$REPO/releases/download/$VERSION" ;;
-esac
 
 say() { printf '%s\n' "$*"; }
 die() { printf 'install: %s\n' "$*" >&2; exit 1; }
 need() { command -v "$1" >/dev/null 2>&1 || die "$1 is needed and was not found"; }
 
 need curl
+if [ "$VERSION" = latest ]; then
+  # The newest release of the computer app: tags vX.Y.Z. (The server image has its own releases,
+  # server/vX.Y.Z, so GitHub's "latest" is not always the app's.)
+  VERSION="$(curl -fsSL --proto '=https' "https://api.github.com/repos/$REPO/releases?per_page=30" \
+    | grep -oE '"tag_name": *"v[0-9][0-9.]*"' | head -n 1 | sed 's/.*"\(v[^"]*\)"$/\1/')" || true
+  [ -n "$VERSION" ] || die "could not find the latest release of the computer app"
+fi
+BASE="https://github.com/$REPO/releases/download/$VERSION"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT INT TERM
 
