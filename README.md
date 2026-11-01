@@ -110,6 +110,17 @@ them.
    `Tunnelio-ubuntu.deb` (Ubuntu and Debian), with ARM builds for Windows and Linux. The installers
    are not signed yet: macOS asks you to allow the app in System Settings → Privacy & Security, and
    Windows may warn about an unknown publisher.
+
+   On Linux and macOS one command does it, for your user only and without sudo (it checks the
+   download's SHA-256 against the release's checksum file before installing):
+
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/ThiagoBzMd/tunnelio/main/scripts/install.sh | sh
+   ```
+
+   With Go 1.26 or newer you can also build it from source, on any of the three systems:
+   `go install github.com/ThiagoBzMd/tunnelio/tray/cmd/tunnelio@latest` (such a build reports its
+   version as `dev` and does not announce new releases).
 2. **Create an account** at [app.tunnelio.app](https://app.tunnelio.app) (or on your own server, see
    below).
 3. **Pair the computer**: in the computer app's menu, choose **Pair a device…**. A page opens with
