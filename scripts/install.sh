@@ -111,8 +111,8 @@ case "$OS" in
     hdiutil detach -quiet "$MNT" || true
 
     say "Installed: $DEST/Tunnelio.app"
-    say "The app is not signed yet: the first time, macOS asks you to allow it in"
-    say "System Settings → Privacy & Security (or right-click the app → Open)."
+    say "The app is not signed yet. The first time, macOS says it could not verify it: click Done, then"
+    say "System Settings → Privacy & Security → Security → Open Anyway (macOS 13/14: right-click → Open)."
     say "Then, in its menu-bar icon, choose \"Pair a device…\" and follow https://tunnelio.app/docs"
     ;;
 

@@ -108,8 +108,11 @@ them.
 1. **Install the computer app** from the [latest release](https://github.com/ThiagoBzMd/tunnelio/releases/latest):
    `Tunnelio-macos.dmg` (Apple silicon and Intel), `Tunnelio-windows.zip` (Windows 10 and 11) or
    `Tunnelio-ubuntu.deb` (Ubuntu and Debian), with ARM builds for Windows and Linux. The installers
-   are not signed yet: macOS asks you to allow the app in System Settings → Privacy & Security, and
-   Windows may warn about an unknown publisher.
+   are not signed yet, so each system asks once before the first opening:
+   - **macOS** says it could not verify the app: click **Done**, open **System Settings → Privacy &
+     Security**, scroll to **Security** and click **Open Anyway** next to the Tunnelio notice, then
+     confirm (on macOS 13 and 14: right-click the app → **Open** → **Open**).
+   - **Windows** shows "Windows protected your PC": click **More info**, then **Run anyway**.
 
    On Linux and macOS one command does it, for your user only and without sudo (it checks the
    download's SHA-256 against the release's checksum file before installing):
